@@ -31,12 +31,16 @@ social:
     url: http://twitter.com/megastep
   - title: facebook
     url: http://facebook.com/megastep
-  - title: stack-overflow
-    url: http://stackoverflow.com/users/115287/megastep
   - title: linkedin
     url: https://www.linkedin.com/in/stephanepeter
   - title: github
     url: http://github.com/megastep
+  - title: stack-overflow
+    url: http://stackoverflow.com/users/115287/megastep
+  - title: youtube
+    url: http://www.youtube.com/user/megastep
+  - title: soundcloud
+    url: https://soundcloud.com/stephanepeter
 
 # Postal address (add as many lines as necessary)
 address:
