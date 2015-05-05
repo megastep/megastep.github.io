@@ -21,7 +21,7 @@ exclude:
 # Footer settings
 footer:
   copyright: Stéphane Peter
-  location: Location
+  location: Snail Mail
   social: Around the Web
   credits: Credits
 
@@ -46,6 +46,7 @@ social:
 address:
   - line: P.O. Box 91506
   - line: Los Angeles, CA 90009
+  - line: USA
 
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
