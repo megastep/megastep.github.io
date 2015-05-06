@@ -108,6 +108,12 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
+header .intro-text .article-title {
+    display: block;
+    font-size: 3em;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
@@ -398,6 +404,10 @@ footer .footer-below {
 
 .portfolio-modal .modal-content .post-content {
     text-align: left;
+    font-size: 20px;
+}
+
+div .article {
     font-size: 20px;
 }
 

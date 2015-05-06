@@ -17,7 +17,7 @@ It is currently the official UNIX solution for [Canon](http://canon.codehost.com
 
 ### Loki Software
 
-I worked on the Linux ports of several major video game titles while working at Loki. These include :
+I previously worked on the Linux ports of several major video game titles while working at Loki. These include :
 
 * [Myth II: Soulblighter](http://www.lokigames.com/products/myth2/)
 * [Heroes of Might & Magic III](http://www.lokigames.com/products/heroes3/)
@@ -34,5 +34,5 @@ As a developer at Loki, I also helped build the then-nascent infrastructure for 
 ### SciTech Software
 
 My first foray as a professional Linux developer was porting the (now defunct) *SciTech Display Doctor* suite of display drivers to Linux, back in 1998. 
-I also participated in the Linux port of the MGL graphics library that was in use by major video game studios at the time, providing direct hardware access to video hardware on PC.
+I also participated in the Linux port of the MGL graphics library that was in use by major video game studios at the time, providing direct hardware access to video cards on PC.
 

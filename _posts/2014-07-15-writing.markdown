@@ -19,4 +19,4 @@ description: I have been blogging in various places over the years, and have als
 
 ### Published Articles
 * [Overview of Linux Printing Systems](http://www.linuxjournal.com/article/6729), published in [Linux Journal](http://www.linuxjournal.com/) on July 3, 2003.
-* I wrote a 5-part series of articles on [Linux Game Programming](/SDL) for the now defunct *Planète Linux* magazine in France, on issues 3 through 7. 
+* I wrote a [5-part series of articles](/SDL) in French on [Linux Game Programming](/SDL) for the now defunct *Planète Linux* magazine in France, on issues 3 through 7. 

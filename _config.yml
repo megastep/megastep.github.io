@@ -1,8 +1,8 @@
 # Site settings
 title: Stéphane Peter
 email: megastep@megastep.org
-url: http://megastep.org
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+url: http://www.megastep.org
+description: "Personal site for Stéphane Peter, professional software developer for Catloaf Software, Codehost, Loki Software, and more."
 
 # Contact form: comment the line below if you want to stick with the default PHP contact form
 contact: static
@@ -56,3 +56,5 @@ credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlighter: rouge
+
