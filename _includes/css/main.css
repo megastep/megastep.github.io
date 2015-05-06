@@ -396,6 +396,11 @@ footer .footer-below {
     box-shadow: none;
 }
 
+.portfolio-modal .modal-content .post-content {
+    text-align: left;
+    font-size: 20px;
+}
+
 .portfolio-modal .modal-content h2 {
     margin: 0;
     font-size: 3em;

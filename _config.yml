@@ -41,12 +41,14 @@ social:
     url: http://www.youtube.com/user/megastep
   - title: soundcloud
     url: https://soundcloud.com/stephanepeter
+  - title: instagram
+    url: https://instagram.com/megastep/
 
 # Postal address (add as many lines as necessary)
 address:
   - line: P.O. Box 91506
   - line: Los Angeles, CA 90009
-  - line: USA
+  - line: United States of America
 
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'

@@ -1,0 +1,52 @@
+---
+layout: default
+modal-id: 5
+img: music.png
+alt: image-alt
+category: Music
+description: Music is a lifelong passion for me. I learned to play keyboards as a kid, then later taught myself guitar and bass.
+---
+
+### Listening
+While I enjoy listening to a wide variety of different music styles, from classical to jazz fusion all the way to extreme death metal, I am particularly passionate about modern
+progressive rock in its various incarnations.
+
+Some of my favorite artists in that genre include:
+
+* [Spock's Beard](http://www.spocksbeard.com/) - one of the top acts today, I became a huge fan since the first time I saw them live. Today, I am proud to be able to also call them friends.
+* [Neal Morse](http://www.nealmorse.com/) was the founding member of Spock's Beard, and left to pursue his solo career focused on Christian prog. An incredibly prolific artist and definitely one of the founding fathers of Modern Prog.
+* [Dream Theater](http://www.dreamtheater.net), the golden standard for metal-infused musicianship. John Petrucci is one of my favorite guitarists and I play his signature MusicMan guitar.
+* [Opeth](http://www.opeth.com), a Swedish death-metal band that evolved into one of the most innovative prog bands today.
+* [Steven Wilson](http://wwww.stevenwilson.com), along with [Porcupine Tree](http://www.porcupinetree.com/), is one of the flag-bearers of modern progressive rock.
+* [The Flower Kings](http://www.flowerkings.se)
+* [Pain of Salvation](http://www.painofsalvation.com)
+* [Transatlantic](http://www.transatlanticweb.com)
+* [Mike Keneally](http://www.keneally.com/)
+* [Heliopolis](https://www.facebook.com/HeliopolisLAProg), a brilliant new prog band on the LA scene.
+* ... and so much more.
+
+On the more popular side, these bands are considered foundational to progressive rock and really helped shape my taste in music:
+
+* *Queen*, my first love with rock music.
+* Pink Floyd, the kings of psychedelic prog.
+* Rush
+* Yes
+
+
+### Attending
+I go to *a lot* of live shows, and living in Los Angeles we are very fortunate to have access to regular performances by some of the top musicians in the world. I can honestly say that I go out to see more live music shows than movies in theaters.
+
+I can be spotted very often at gigs of my favorite artists around town, and I am a regular at the [Baked Potato](http://www.thebakedpotato.com/) club in Studio City. So much great music happening all the time there, this place almost feels like a second home to me.
+
+[CalProg](http://www.calprog.com/) is a great organization putting up consistently awesome prog shows in Southern California. I am proud to have been a regular patron since its inception back in 2003.
+
+### Performing
+While my first instrument was the keyboard, for which I had lessons as a kid, my favorite instrument is the electric guitar. I bought my first Ibanez at the Guitar Center in Hollywood in 2001 and am completely self-taught. 
+
+I later expanded to other string instruments and can be occasionally spotted playing electric bass with the [Peninsula Symphonic Winds](https://www.facebook.com/peninsulawinds) in Palos Verdes, where my wife also performs on French horn.
+
+### Online
+
+* [My profile](http://www.last.fm/user/megascargot) on last.fm, see what I listen to.
+* [My music](https://soundcloud.com/stephanepeter) on SoundCloud.
+

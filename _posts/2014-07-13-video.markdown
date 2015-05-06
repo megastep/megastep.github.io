@@ -1,0 +1,16 @@
+---
+layout: default
+modal-id: 6
+img: video.png
+alt: image-alt
+category: Video
+description: I have an interest in film and video production and have hundreds of videos posted on my YouTube channel and other sites.
+---
+### YouTube Channels
+* [My main channel](http://www.youtube.com/user/megastep), where I post a variety of things. Lots of footage from concerts I attended, the occasional personal videos, etc. My main video channel.
+* The [Catloaf Software](http://www.youtube.com/user/catloafsoft) channel mostly contains promotional videos for our apps.
+* A more [personal channel](https://www.youtube.com/user/stephanepetercx), mostly for family in France. Here's where you'll find our wedding footage.
+
+### Other Sites
+* I also have a few videos posted on my [Vimeo account](http://vimeo.com/megastep).
+* Look for `@megastep` on the [Periscope](http://periscope.tv/) app!
