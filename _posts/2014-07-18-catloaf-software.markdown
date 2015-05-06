@@ -5,17 +5,17 @@ img: catloaf.png
 alt: image-alt
 client: Start Bootstrap
 category: iOS Development
-description: I founded Catloaf Software to market various mobile apps for Apple iOS.
+description: As an early enthusiast with mobile development, I founded Catloaf Software to market apps for Apple iOS.
 ---
-
 ### iOS Applications
 
-* [Trainer HD](http://www.trainerhd.com/), a series of educational games for learning the fretboard of the guitar, bass and other stringed instruments.
-* [Texts From](http://txf.ro), a series of simple apps to get daily quotes from [Jesus](http://txf.ro/m/jesus), [Oscar Wilde](http://txf.ro/m/wilde) or the [founding fathers of the United States](http://txf.ro/m/fathers).
-* [Play Him Off, Keyboard Cat!](http://iphonekeyboardcat.com/), my first iOS app, is essentially a convenient archive of Keyboard Cat mashup videos, a YouTube meme that became very popular around 2008.
+* [Trainer HD](http://www.trainerhd.com/) is a series of educational games for learning the fretboard of the guitar, bass and other stringed instruments.
+* [Texts From](http://txf.ro), a series of simple apps used to get daily quotes from [Jesus](http://txf.ro/m/jesus), [Oscar Wilde](http://txf.ro/m/wilde) or the [founding fathers of the United States](http://txf.ro/m/fathers).
+* [Play Him Off, Keyboard Cat!](http://iphonekeyboardcat.com/), my first iOS app, is essentially a convenient archive of [Keyboard Cat](http://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009.
 
-### J2ME Applications
+[![Catloaf Software Apps](img/appstore-badge.png)](http://appstore.catloafsoft.com)
 
-* [Guitar Trainer](http://www.mobiletutor.org/guitar) was originally written for older cell phones (including Blackberry), as a J2ME app that could be purchased directly from our [MobileTutor.org](http://www.mobiletutor.org) website.
-* Before the advent of the App Store and Google Play, the MobileTutor.org store backend was entirely designed from scratch, with payment processing through PayPal, Amazon, Google Checkout and a number of mobile payment processors.
+### Java Mobile Applications (J2ME)
 
+* [Guitar Trainer](http://www.mobiletutor.org/guitar) was originally written for older mobile phones (including *Blackberry*), as a J2ME app that could be purchased directly from my [MobileTutor.org](http://www.mobiletutor.org) website.
+* Before the advent of online marketplaces such as the App Store and Google Play, the MobileTutor.org store backend was entirely designed from scratch, with payment processing through PayPal, Amazon, Google Checkout and a number of other mobile payment processors.

@@ -1,11 +1,10 @@
 ---
 layout: default
 modal-id: 4
-date: 2014-07-15
 img: writing.png
 alt: image-alt
 category: Writing & Blogs
-description: I have been blogging in various places over the years, and have also written articles for a number of print publications.
+description: I have been blogging in various places over the years.<br/>I also wrote a few articles for print publications.
 ---
 
 ### Blogs
@@ -15,8 +14,8 @@ description: I have been blogging in various places over the years, and have als
 
 ### Social Media
 * I have a fairly active [Facebook](http://www.facebook.com/megastep) profile.
-* My [Twitter](http://twitter.com/megastep) feed sees occasional updates.
+* I am `@megastep` on [Twitter](http://twitter.com/megastep).
 
 ### Published Articles
 * [Overview of Linux Printing Systems](http://www.linuxjournal.com/article/6729), published in [Linux Journal](http://www.linuxjournal.com/) on July 3, 2003.
-* I wrote a [5-part series of articles](/SDL) in French on [Linux Game Programming](/SDL) for the now defunct *Planète Linux* magazine in France, on issues 3 through 7. 
+* I wrote a [5-part series of articles](/SDL) in French on [Linux Game Programming with SDL](/SDL) for the now defunct *Planète Linux* magazine in France, on issues 3 through 7. 

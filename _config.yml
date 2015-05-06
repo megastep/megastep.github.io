@@ -40,8 +40,12 @@ social:
     url: http://stackoverflow.com/users/115287/megastep
   - title: youtube
     url: http://www.youtube.com/user/megastep
+  - title: vimeo-square
+    url: https://vimeo.com/megastep
   - title: soundcloud
     url: https://soundcloud.com/stephanepeter
+  - title: lastfm
+    url: http://www.last.fm/user/megascargot
   - title: instagram
     url: https://instagram.com/megastep/
 
