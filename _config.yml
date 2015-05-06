@@ -17,6 +17,7 @@ exclude:
   - screenshot.png
   - README.md
   - LICENCE
+  - CNAME
 
 # Footer settings
 footer:
