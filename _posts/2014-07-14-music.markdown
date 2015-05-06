@@ -50,7 +50,7 @@ I am otherwise not currently part of any band or studio project, though I have b
 
 For a recent performance of my guitar playing, here is a video of myself performing the classic "Johnny B. Goode" at my wedding in July 2014.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SZGYcIKJ55k" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/SZGYcIKJ55k" frameborder="0" allowfullscreen></iframe>
 
 ### Online
 
