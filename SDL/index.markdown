@@ -1,6 +1,12 @@
 ---
 layout: article
 title: Programmer des jeux sous Linux avec SDL
+section: Linux Programming
+tags:
+- linux
+- programming
+- SDL
+locale: fr_FR
 ---
 Il s'agit d'une série de cinq articles en français, traitant comme son nom l'indique de la librairie [SDL](http://www.libsdl.org).
 

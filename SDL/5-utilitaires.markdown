@@ -1,8 +1,15 @@
 ---
 layout: article
-title: Programmer des jeux sous Linux avec SDL
+title: Programmer des jeux sous Linux avec SDL <br/>Partie V
+section: Linux Programming
+tags:
+- linux
+- programming
+- SDL
+locale: fr_FR
+published: Planète Linux numéro 7
 ---
-## Partie V: Fonctions utilitaires
+## Fonctions utilitaires
 
 Pour le dernier opus de cette série d'articles d'initiation à SDL, nous allons aborder tout ce (threads, gestion du cédérom ...) que nous n'avons pas pu classer dans l'un des articles précédents.
 

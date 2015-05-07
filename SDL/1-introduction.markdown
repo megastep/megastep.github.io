@@ -1,8 +1,15 @@
 ---
 layout: article
-title: Programmer des jeux sous Linux avec SDL
+title: Programmer des jeux sous Linux avec SDL <br/>Partie I
+section: Linux Programming
+tags:
+- linux
+- programming
+- SDL
+locale: fr_FR
+published: Planète Linux numéro 3
 ---
-## Partie I: Introduction à SDL
+## Introduction à SDL
 
 Simple Directmedia Layer (SDL) est une librairie pour le développement d'applications multimédia multi-plateformes. Placée sous licence LGPL, elle a été utilisée pour le développement de nombreuses applications, aussi bien libres que commerciales. Citons les jeux Civilization : Call To Power, Myth II, Hopkins FBI, l'émulateur Macintosh Executor, le player MpegTV, ainsi que divers autres jeux/démos/applications multimédia... Il s'agit, en fait, de l'un des principaux outils de développement utilisés par Loki. Sam Lantinga, l'auteur de SDL est d'ailleurs employé de Loki, ce qui n'est pas étonnant... ;-)
 

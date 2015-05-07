@@ -1,8 +1,15 @@
 ---
 layout: article
-title: Programmer des jeux sous Linux avec SDL
+title: Programmer des jeux sous Linux avec SDL <br/>Partie II
+section: Linux Programming
+tags:
+- linux
+- programming
+- SDL
+locale: fr_FR
+published: Planète Linux numéro 4
 ---
-## Partie II: Programmation graphique
+## Programmation graphique
 
 Dans le numéro précédent, nous avons abordé les différents aspects de la librairie SDL. Cet article se concentre davantage sur la partie graphique de SDL qui est, sans aucun doute, la plus importante pour la programmation de jeux.
 

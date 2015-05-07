@@ -1,8 +1,9 @@
 # Site settings
 title: Stéphane Peter
 email: megastep@megastep.org
-url: http://www.megastep.org
+url: http://stephanepeter.com
 description: "Personal site for Stéphane Peter, professional software developer for Catloaf Software, Codehost, Loki Software, and more."
+locale: en_US
 
 # Contact form: comment the line below if you want to stick with the default PHP contact form
 contact: static

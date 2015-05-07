@@ -114,6 +114,12 @@ header .intro-text .article-title {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+header .intro-text .article-published {
+    display: block;
+    font-size: 1.5em;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;

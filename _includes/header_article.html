@@ -6,6 +6,9 @@
                     <div class="intro-text">
                         <span class="article-title">{{ page.title }}</span>
                         <hr class="star-light" />
+			{% if page.published %}
+			<span class="article-published">{{ page.published }}</span>
+			{% endif %}
                     </div>
                 </div>
             </div>

@@ -1,8 +1,15 @@
 ---
 layout: article
-title: Programmer des jeux sous Linux avec SDL
+title: Programmer des jeux sous Linux avec SDL <br/>Partie III
+section: Linux Programming
+tags:
+- linux
+- programming
+- SDL
+locale: fr_FR
+published: Planète Linux numéro 5
 ---
-## Partie III: Gestion des évènements
+## Gestion des évènements
 
 Le numéro précédent traitait de la programmation graphique par l'intermédiaire de la librairie SDL. Cet article aborde la gestion des événements, ce qui va vous permettre d'ajouter un peu d'interactivité avec l'utilisateur, via le clavier et la souris.
  

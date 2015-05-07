@@ -1,8 +1,15 @@
 ---
 layout: article
-title: Programmer des jeux sous Linux avec SDL
+title: Programmer des jeux sous Linux avec SDL <br/>Partie IV
+section: Linux Programming
+tags:
+- linux
+- programming
+- SDL
+locale: fr_FR
+published: Planète Linux numéro 6
 ---
-## Partie IV: Programmation audio
+## Programmation audio
 
 Nous continuons notre découverte de la bibliothèque SDL avec, ce mois-ci, la partie sonore. Mais avant de passer à l'initiation proprement dite, profitons-en pour vous donner quelques nouvelles récentes concernant l'état de l'art de SDL depuis notre dernier article.
 
