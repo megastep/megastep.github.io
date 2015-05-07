@@ -23,7 +23,9 @@ Avant d'ouvrir une nouvelle fenêtre, il est toujours bon de savoir quelles sont
 
 Le format vidéo renvoyé par la fonction `SDL_GetVideoInfo()` indique le format "idéal" pour le contexte d'exécution. Il est toujours possible de demander à SDL d'ouvrir une surface avec des caractéristiques différentes, la librairie faisant son possible pour satisfaire l'utilisateur avec, toutefois, une certaine perte de performances. L'activation d'un mode vidéo se fait par l'intermédiaire de la fonction `SDL_SetVideoMode()` dont le prototype est le suivant :
 
-`SDL_Surface *SDL_SetVideoMode(int width, int height, int bpp, Uint32 flags);`
+{% highlight c %}
+SDL_Surface *SDL_SetVideoMode(int width, int height, int bpp, Uint32 flags);
+{% endhighlight %}
 
 Son utilisation est assez évidente. La valeur du paramètre "flags" est une combinaison des valeurs suivantes :
 
@@ -40,7 +42,9 @@ Il est pratiquement toujours nécessaire d'allouer des surfaces supplémentaires
 
 La fonction
 
-`SDL_Surface *SDL_AllocSurface (Uint32 flags, int width, int height, int depth, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask);`
+{% highlight c %}
+SDL_Surface *SDL_AllocSurface (Uint32 flags, int width, int height, int depth, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask);
+{% endhighlight %}
 
 crée une surface de format arbitraire en mémoire. Les paramètres " mask " permettent de spécifier le masque RGB pour le format de pixels de la surface. Par exemple, un mode 24 bits (depth = 24) pourra avoir `Rmask = 0xFF0000, Gmask = 0x00FF00, Bmask = 0x0000FF`. Les flags supportés sont les suivants :
 
@@ -55,13 +59,17 @@ Les surfaces allouées par `SDL_AllocSurface()` doivent être libérées par `SD
 
 SDL permet de créer des surfaces transparentes, par la définition d'une couleur clé pour la transparence. La fonction
 
-`SDL_SetColorKey(SDL_Surface *surface, Uint 32 flag, Uint32 key)`
+{% highlight c %}
+SDL_SetColorKey(SDL_Surface *surface, Uint 32 flag, Uint32 key)
+{% endhighlight %}
 
 est utilisée à cet effet. La couleur "key" sera définie comme la couleur transparente dans la surface et les pixels de cette couleur ne seront pas affectés lors de la copie de la surface. Le paramètre "flag" doit être `SDL_SRCCOLORKEY` pour changer la valeur de la clé. Une valeur nulle désactive la transparence. La transparence est principalement utilisée pour réaliser des sprites dans les jeux : un sprite n'est qu'un bloc de pixels avec une couleur transparente, ce qui correspond à une surface SDL transparente.
 
 SDL supporte également " l'alpha blending ". Il s'agit d'une semi-transparence, une valeur "alpha" donnant le degré de transparence de la surface. La fonction
 
-`SDL_SetAlpha(SDL_Surface *surface, Uint32 flag, Uint8 alpha)`
+{% highlight c %}
+SDL_SetAlpha(SDL_Surface *surface, Uint32 flag, Uint8 alpha)
+{% endhighlight %}
 
 est utilisée à cet effet. `alpha` varie entre 0 (opaque) et 255 (complètement transparent, aucun pixel ne sera affiché !). Tout comme pour `SDL_SetColorKey()`, une valeur de 0 pour le flag désactive l'alpha blending et `SDL_SRCALPHA` l'active. L'alpha blending permet de réaliser des textures transparentes, comme si l'image était projetée sur un fond différent.
 
@@ -85,7 +93,9 @@ SDL_UnlockSurface(sf);
 
 Lorsqu'une surface n'est pas en mémoire vidéo et que l'on y accède néanmoins directement via le pointeur, il faut veiller à actualiser périodiquement l'écran à partir du contenu du buffer, par la fonction `SDL_UpdateRect()` ou `SDL_UpdateRects()` pour un ensemble de zones précises à actualiser. Les verrouillages de la surface ne sont alors plus nécessaires. SDL fournit également des primitives de bases sur les surfaces qui sont, si possible, accélérées par le matériel. On trouve, notamment, la copie de bloc ("blitting"), via :
 
-`int SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect);`
+{% highlight c %}
+int SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect);
+{% endhighlight %}
 
 Les arguments précisent une zone dans chaque surface (source et destination). Il faut veiller à ce que les zones soient de tailles égales. Les attributs de transparence et d'alpha blending sont respectés. D'une manière générale, les copies ("blits") entre surfaces sont beaucoup plus rapides lorsque les deux surfaces sont en mémoire vidéo.
 
@@ -95,7 +105,9 @@ On trouve également le remplissage de rectangles d'une certaine couleur (`SDL_F
 
 SDL gère également l'apparence du curseur de souris. Sous X11, la gestion est déléguée au serveur X, mais dans les modes vidéo plein écran (DGA), un curseur de souris logiciel (dessiné et géré par SDL) est utilisé. Un type `SDL_Cursor` est défini ; on crée un nouveau curseur, grâce à la fonction suivante :
 
-`SDL_Cursor *SDL_CreateCursor(Uint8 *data, Uint8 *mask, int w, int h, int hot_x, int hot_y);`
+{% highlight c %}
+SDL_Cursor *SDL_CreateCursor(Uint8 *data, Uint8 *mask, int w, int h, int hot_x, int hot_y);
+{% endhighlight %}
 
 `w` et `h` sont, respectivement, la largeur et la hauteur du curseur (multiples de 8). On fournit également les coordonnées du " hot spot " à l'intérieur du curseur; il s'agit du point considéré comme le centre du curseur. Par exemple, pour un curseur en forme de viseur, le hot spot sera le point central du viseur. Les paramètres "data" et "mask" sont des masques binaires définissant la forme du curseur monochrome. Les combinaisons pour chaque bit sont les suivantes :
 
@@ -113,11 +125,15 @@ Les curseurs alloués de cette façon doivent être libérés par `SDL_FreeCurso
 
 Lorsque SDL est utilisé dans un environnement fenêtré (X11 ou Windows), certaines interactions avec le gestionnaire de fenêtres sont possibles. On trouve :
 
-`SDL_WM_SetCaption(const char *title, const char *icon) :`
+{% highlight c %}
+SDL_WM_SetCaption(const char *title, const char *icon);
+{% endhighlight %}
 
 change le titre de la fenêtre et le titre de l'icône. Les paramètres courants peuvent être obtenus par `SDL_WM_GetCaption()`.
 
-`SDL_WM_SetIcon(SDL_Surface *icon, Uint8 *mask) :`
+{% highlight c %}
+SDL_WM_SetIcon(SDL_Surface *icon, Uint8 *mask);
+{% endhighlight %}
 
 Change l'icône associée à la fenêtre, à partir d'une surface SDL. Le masque indique la transparence de l'icône d'une manière similaire aux curseurs. Cette fonction doit être appelée avant `SDL_SetVideoMode()`.
 

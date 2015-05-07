@@ -39,19 +39,27 @@ Le champ `type` permet d'identifier le type de l'événement, parmi les valeurs 
 
 Elle se fait par l'intermédiaire des cinq fonctions suivantes :
 
-`void SDL_PumpEvents(void);`
+{% highlight c %}
+void SDL_PumpEvents(void);
+{% endhighlight %}
 
 Cette fonction permet de laisser SDL remplir la file d'événements avec ceux en attente sur le système (mise à jour de la file). Cette fonction est généralement appelée dans la boucle principale de gestion des événements de l'application (voir l'exemple ci-dessous).
 
-`int SDL_PollEvent(SDL_Event *event);`
+{% highlight c %}
+int SDL_PollEvent(SDL_Event *event);
+{% endhighlight %}
 
 Essaie de sortir un événement de la file d'attente (opération non bloquante). La fonction retourne 0, si aucun événement n'est disponible et 1, dans le cas contraire. L'événement éventuellement récupéré est stocké dans la structure dont l'adresse est fournie en paramètre et qui peut être `NULL`, si l'on désire simplement ne pas en tenir compte.
 
-`int SDL_WaitEvent(SDL_Event *event);`
+{% highlight c %}
+int SDL_WaitEvent(SDL_Event *event);
+{% endhighlight %}
 
 Il s'agit de la variante bloquante de `SDL_PollEvent()`, autrement dit la fonction ne finit que lorsqu'un événement est disponible (auquel cas la valeur retournée est 1), ou en cas d'erreur (retourne 0).
 
-`int SDL_PeepEvents(SDL_Event *events, int numevents, SDL_eventaction action, Uint32 mask);`
+{% highlight c %}
+int SDL_PeepEvents(SDL_Event *events, int numevents, SDL_eventaction action, Uint32 mask);
+{% endhighlight %}
 
 Cette fonction permet une manipulation plus poussée de la file d'événements. Plusieurs opérations sont disponibles, comme l'indiquent les valeurs possibles du paramètre 'action':
 
@@ -61,7 +69,9 @@ Cette fonction permet une manipulation plus poussée de la file d'événements. 
 
 Le paramètre `mask` optionnel indique un masque des événements à extraire qui est une combinaison binaire.
 
-`Uint8 SDL_EventState(Uint8 type, int state);`
+{% highlight c %}
+Uint8 SDL_EventState(Uint8 type, int state);
+{% endhighlight %}
 
 Cette fonction permet de changer la manière dont sont traités certains types d'événements. Le paramètre `type` indique les types d'événements auxquels la fonction s'applique et `state` peut avoir l'une des valeurs suivantes :
 
@@ -165,13 +175,17 @@ SDL gère les 3 boutons de la souris (numérotés de 1 à 3, 2 étant utilisé p
 
 Afin de garder un contrôle encore plus strict sur la nature des événements à traiter par SDL (et outre les attributs simples 'ignoré' et 'activé'), la fonction
 
-`SDL_SetEventFilter(SDL_EventFilter filter);`
+{% highlight c %}
+SDL_SetEventFilter(SDL_EventFilter filter);
+{% endhighlight %}
 
 permet la mise en place d'un filtre plus fin. Il s'agit, en fait, d'une fonction fournie par l'utilisateur et qui permettra ainsi un examen approfondi de chaque événement avant de décider s'il doit être ajouté dans la liste des événements.
 
 Le type `SDL_EventFilter` est en fait un pointeur de fonction. Sa définition est la suivante :
 
-`typedef int (*SDL_EventFilter)(const SDL_Event *event);`
+{% highlight c %}
+typedef int (*SDL_EventFilter)(const SDL_Event *event);
+{% endhighlight %}
 
 La fonction filtre devra renvoyer 1, si l'événement doit être enfilé et 0, dans le cas contraire. Le filtre est donc appelé après que SDL ait intercepté l'événement, mais avant que celui-ci ne soit mis dans la file.
 

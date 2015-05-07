@@ -21,37 +21,53 @@ La plupart des programmes modernes reposent, d'une manière ou d'une autre, sur 
 
 SDL propose les mécanismes de base pour la multi-programmation. Ceux-ci reposent sur les threads natives du système (POSIX threads pour Linux et la plupart des Unix). Il est possible de créer de nouvelles threads, par l'intermédiaire des fonctions suivantes :
 
-`SDL_Thread *SDL_CreateThread(int (*fn)(void *), void *data);`
+{% highlight c %}
+SDL_Thread *SDL_CreateThread(int (*fn)(void *), void *data);
+{% endhighlight %}
 
 Cette fonction crée une nouvelle thread, dont le point d'entrée est la fonction passée en paramètre. La fonction constituant la thread peut prendre un argument optionnel, correspondant à l'argument `data` de `SDL_CreateThread()`. L'exécution de la thread commence immédiatement après l'appel de `SDL_CreateThread()`. La structure `SDL_Thread` est un type opaque utilisé pour manipuler la thread ainsi créée. Il est à noter qu'elle se termine en même temps que la fonction qui la compose...
 
-`void SDL_KillThread(SDL_Thread *thread);`
+{% highlight c %}
+void SDL_KillThread(SDL_Thread *thread);
+{% endhighlight %}
 
 Cette fonction permet de stopper l'exécution d'une thread. D'une manière générale, il vaut mieux éviter d'employer cette fonction qui provoque une fin brutale. Nous vous conseillons d'utiliser les mécanismes de synchronisation décrits ci-dessous, pour terminer proprement son exécution.
 
-`void SDL_WaitThread(SDL_Thread *thread, int *status);`
+{% highlight c %}
+void SDL_WaitThread(SDL_Thread *thread, int *status);
+{% endhighlight %}
 
 Cette fonction est bloquante, jusqu'à ce que la thread désignée se termine. Le code de retour est ensuite affecté à la variable pointée par `status`. Ce code correspond à la valeur retournée par la fonction exécutée par la thread.
 
-`Uint32 SDL_ThreadID(void);`
+{% highlight c %}
+Uint32 SDL_ThreadID(void);
+{% endhighlight %}
 
 Cette fonction renvoie un entier positif identifiant la thread en cours d'exécution. SDL ne garantit rien quant à la valeur retournée (si elle correspond à un numéro de processus, par exemple). Par conséquence, son seul usage valide est la comparaison avec d'autres identifiants, par exemple, pour déterminer si vous êtes en train d'exécuter du code dans une thread particulière.
 
 La programmation parallèle ne peut se faire sans les mécanismes de synchronisation de base. SDL fournit des verrous d'exclusion mutuelle ("mutex"), qui permettent principalement de délimiter des sections de code ne pouvant être accédées que par une seule thread à la fois. Fort heureusement, la plupart des autres mécanismes de synchronisation peuvent être implantés à partir de mutex. Reste l'espoir que les futures versions de SDL fournissent d'autres mécanismes plus avancés. L'utilisation des mutex est très simple:
 
-`SDL_mutex *SDL_CreateMutex(void);`
+{% highlight c %}
+SDL_mutex *SDL_CreateMutex(void);
+{% endhighlight %}
 
 Explicite, cette fonction crée un nouveau mutex, identifié par une variable de type `SDL_mutex`.
 
-`void SDL_DestroyMutex(SDL_mutex *mutex);`
+{% highlight c %}
+void SDL_DestroyMutex(SDL_mutex *mutex);
+{% endhighlight %}
 
 Utilisez cette fonction pour libérer un mutex préalablement alloué via `SDL_CreateMutex()`.
 
-`int SDL_mutexP(SDL_mutex *mutex);`
+{% highlight c %}
+int SDL_mutexP(SDL_mutex *mutex);
+{% endhighlight %}
 
 Cette fonction verrouille le mutex désigné. Si le mutex est déjà verrouillé, cette fonction se met en attente, jusqu'à ce que le mutex ne soit plus verrouillé. La fonction renvoie -1, en cas d'erreur et 0, si tout s'est bien passé.
 
-`int SDL_mutexV(SDL_mutex *mutex);`
+{% highlight c %}
+int SDL_mutexV(SDL_mutex *mutex);
+{% endhighlight %}
 
 Contrepartie de la fonction précédente, cette fonction déverrouille un mutex précédemment verrouillé par `SDL_mutexP()`. Cette fonction est non-bloquante et renvoie également -1, en cas d'erreur.
 
@@ -61,24 +77,32 @@ Concrètement, le programmeur 'encadre' les sections de programme ne devant êtr
 
 SDL permet également de gérer le temps et de programmer des appels répétitifs à des functions (*timers*).
 
-`Uint32 SDL_GetTicks(void);`
+{% highlight c %}
+Uint32 SDL_GetTicks(void);
+{% endhighlight %}
 
 Cette fonction, très utile, renvoie le nombre de millisecondes écoulées depuis l'initialisation de SDL.
 
-`void SDL_Delay(Uint32 ms);`
+{% highlight c %}
+void SDL_Delay(Uint32 ms);
+{% endhighlight %}
 
 Cette fonction bloque le programme pendant 'ms' millisecondes.
 SDL 1.0 permet la définition d'un simple timer, autrement dit une fonction appelée à intervalles réguliers. Pour pouvoir utiliser ceux-ci, `SDL_Init()` doit avoir reçu en appel le flag **SDL_INIT_TIMER**. Deux implémentations des timers sont disponibles sur la plupart des systèmes supportés par SDL. Sous Linux et autres systèmes permettant une gestion des événements dans une thread séparée, les timers sont simulés de manière générique depuis cette thread. Dans le cas contraire, tous les systèmes disposent de fonctions natives pour les timers, par l'intermédiaire de `setitimer()` sous Unix, par exemple. Spécialement sous Linux où les timers sont implantés par le biais de signaux, il est fortement recommandé d'utiliser les timers 'threadés', si le programme est lui-même multithreadé, cela étant dû aux problèmes d'interaction entre signaux et threads multiples.
 
 Le prototype de la fonction doit correspondre au type suivant:
 
-`typedef Uint32 (*SDL_TimerCallback)(Uint32 interval); `
+{% highlight c %}
+typedef Uint32 (*SDL_TimerCallback)(Uint32 interval); 
+{% endhighlight %}
 
 La fonction timer est appelée avec, comme argument, la valeur actuelle de l'intervalle d'appel. La fonction est chargée de retourner la valeur du prochain intervalle ou 0, si le timer doit s'arrêter.
 
 La mise en route du timer se fait par l'appel de la fonction suivante :
 
-`int SDL_SetTimer(Uint32 interval, SDL_TimerCallback callback);`
+{% highlight c %}
+int SDL_SetTimer(Uint32 interval, SDL_TimerCallback callback);
+{% endhighlight %}
 
 La variable `interval` est exprimée en millisecondes. Il ne peut y avoir qu'une seule fonction timer à la fois qui utilise cette fonction. L'arrêt du timer s'effectue par l'appel de `SDL_SetTimer(0,0)`.
 
@@ -86,17 +110,23 @@ Si le programmeur a besoin de plusieurs timers simultanés, il est possible d'ut
 
 Le prototype des fonctions timer permet dorénavant de prendre un argument supplémentaire dont la signification est laissée à la charge de l'utilisateur.
 
-`typedef Uint32 (*SDL_NewTimerCallback)(Uint32 interval, void *param);`
+{% highlight c %}
+typedef Uint32 (*SDL_NewTimerCallback)(Uint32 interval, void *param);
+{% endhighlight %}
 
 Le programmeur peut définir autant de timers simultanés qu'il le désire, par l'intermédiaire de la nouvelle fonction `SDL_AddTimer()` :
 
-`SDL_TimerID SDL_AddTimer(Uint32 interval, SDL_NewTimerCallback callback, void *param);`
+{% highlight c %}
+SDL_TimerID SDL_AddTimer(Uint32 interval, SDL_NewTimerCallback callback, void *param);
+{% endhighlight %}
 
 Son utilisation est globalement similaire à `SDL_SetTimer()`, à la différence qu'elle retourne un identifiant pour le timer qui vient d'être défini, afin de pouvoir le référencer par la suite.
 
 Pour arrêter un timer unique, il faut utiliser la fonction `SDL_RemoveTimer()` définie comme suit et qui retourne une valeur booléenne indiquant si tout s'est bien déroulé.
 
-`SDL_bool SDL_RemoveTimer(SDL_TimerID id);`
+{% highlight c %}
+SDL_bool SDL_RemoveTimer(SDL_TimerID id);
+{% endhighlight %}
 
 En guise d'illustration, le programme 'testtimer.c' fourni avec SDL et reproduit dans l'encadré 2 démontre comment utiliser ces fonctions.
 
@@ -104,26 +134,38 @@ En guise d'illustration, le programme 'testtimer.c' fourni avec SDL et reproduit
 
 SDL permet de contrôler le ou les lecteur/s de CDROM présents et configurés sur le système (incluant aussi implicitement les lecteurs DVD-ROM). Cela concerne principalement la lecture de pistes audio.
 
-`int SDL_CDNumDrives(void);`
+{% highlight c %}
+int SDL_CDNumDrives(void);
+{% endhighlight %}
 
 Renvoie le nombre de lecteurs installés.
 
-`const char *SDL_CDName(int drive);`
+{% highlight c %}
+const char *SDL_CDName(int drive);
+{% endhighlight %}
 
 Renvoie le nom associé au lecteur numéro 'drive' (le premier lecteur est le numéro 0). Le nom est de la forme `/dev/cdrom` sous Linux. Sous d'autres systèmes, le nom sera vraisemblablement différent (par exemple `D:` sous Windows).
 
-`SDL_CD *SDL_CDOpen(int drive);`
+{% highlight c %}
+SDL_CD *SDL_CDOpen(int drive);
+{% endhighlight %}
 
 Cette fonction renvoie un pointeur permettant de manipuler un lecteur particulier. `NULL` est renvoyé, si une erreur quelconque est survenue.
 Le lecteur est libéré par l'appel à la fonction `SDL_CDClose()` définie comme suit:
 
-`void SDL_CDClose(SDL_CD *cdrom);`
+{% highlight c %}
+void SDL_CDClose(SDL_CD *cdrom);
+{% endhighlight %}
 
-`CDstatus SDL_CDStatus(SDL_CD *cdrom);`
+{% highlight c %}
+CDstatus SDL_CDStatus(SDL_CD *cdrom);
+{% endhighlight %}
 
 Cette fonction renvoie l'état actuel du lecteur qui peut prendre l'une des valeurs suivantes : **CD_TRAYEMPTY** (pas de disque), **CD_STOPPED** (lecture arrêtée), **CD_PLAYING** (lecture en cours), **CD_PAUSED** (mode pause). Il est recommandé d'utiliser la macro `CD_INDRIVE()` pour déterminer si le CD/DVD est dans le lecteur.
 
-`int SDL_CDEject(SDL_CD *cdrom);`
+{% highlight c %}
+int SDL_CDEject(SDL_CD *cdrom);
+{% endhighlight %}
 
 Cette fonction permet d'éjecter un CD sur le lecteur désigné. La valeur retournée est négative, si une erreur est survenue, sinon, nulle.
 
@@ -174,7 +216,9 @@ SDL_CDPlay(cd, cd->track[3].offset, cd->track[3].length);
 
 Ce bout de programme jouera la piste audio numéro 3 du disque. Bien entendu, il faudrait normalement vérifier que cette piste existe auparavant...
 
-`int SDL_CDPlayTracks(SDL_CD *cdrom, int start_track, int start_frame, int ntracks, int nframes);`
+{% highlight c %}
+int SDL_CDPlayTracks(SDL_CD *cdrom, int start_track, int start_frame, int ntracks, int nframes);
+{% endhighlight %}
 
 Cette fonction est d'un usage plus simple que `SDL_CDPlay()`. Cette fonction prend en argument un numéro de piste de début, le numéro de la frame à l'intérieur de ladite piste, le nombre de pistes à jouer et un éventuel nombre de frames supplémentaires. Notez que cette fonction évitera automatiquement de jouer les pistes de données non-audio.
 

@@ -26,11 +26,15 @@ La partie audio de SDL est particulièrement simple et permet un accès aux fonc
 
 Sous Linux ainsi que sous la plupart des systèmes supportés par SDL, le sous-système audio utilise une thread séparée. Afin d'initialiser correctement la librairie, il faudra tout d'abord veiller à appeler la fonction `SDL_Init()` avec le flag **SDL_INIT_AUDIO** :
 
- `SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);`
+ {% highlight c %}
+SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
+{% endhighlight %}
   
 Ceci a pour effet de démarrer la thread chargée de la gestion audio. Pour ouvrir le périphérique proprement dit, il faut recourir à la fonction :
 
-`SDL_OpenAudio(SDL_AudioSpec *desired, SDL_AudioSpec *obtained);`
+{% highlight c %}
+SDL_OpenAudio(SDL_AudioSpec *desired, SDL_AudioSpec *obtained);
+{% endhighlight %}
 
 Cette fonction prend en argument deux structures `SDL_AudioSpec` qui permettent de décrire le format audio désiré. La structure pointée par `desired` doit être remplie de la manière suivante :
 
@@ -105,7 +109,9 @@ Il est possible d'utiliser les fonctions `SDL_LockAudio()` et `SDL_UnlockAudio()
 
 SDL fournit une fonction pour charger un fichier son au format WAV en mémoire. Actuellement, seuls les fichiers WAV de base sont supportés (données brutes ou au format compressé ADPCM).
 
-`SDL_AudioSpec *SDL_LoadWAV(const char *file, SDL_AudioSpec *spec, Uint8 **audio_buf, Uint32 *audio_len);`
+{% highlight c %}
+SDL_AudioSpec *SDL_LoadWAV(const char *file, SDL_AudioSpec *spec, Uint8 **audio_buf, Uint32 *audio_len);
+{% endhighlight %}
 
 Son utilisation est la suivante : `file` est le chemin d'accès du fichier à charger. On fournit l'adresse d'une structure `SDL_AudioSpec` qui sera remplie par la fonction avec les données décrivant le format du fichier chargé (cette adresse sera également retournée par la fonction). La fonction se charge d'allouer un tampon en mémoire et d'y charger le son. Les arguments `audio_buf` et `audio_len` sont retournés par SDL, afin d'indiquer la longueur et l'adresse dudit tampon. En cas d'erreur, la fonction renvoie `NULL` au lieu de `spec`. Le tampon alloué doit, par la suite, être explicitement libéré par l'utilisateur à l'aide de la fonction `SDL_FreeWAV()`. 
 
@@ -133,7 +139,9 @@ typedef struct SDL_AudioCVT {
 
 Rassurez-vous, une bonne partie des champs de cette structure est remplie pour vous par SDL. Connaissant les caractéristiques des formats d'origine et de destination, il faut faire appel à la fonction `SDL_BuildAudioCVT()` afin de préparer le bloc de conversion :
 
-`int SDL_BuildAudioCVT(SDL_AudioCVT *cvt, Uint16 src_format, Uint8 src_channels, int src_rate, Uint16 dst_format, Uint8 dst_channels, int dst_rate);`
+{% highlight c %}
+int SDL_BuildAudioCVT(SDL_AudioCVT *cvt, Uint16 src_format, Uint8 src_channels, int src_rate, Uint16 dst_format, Uint8 dst_channels, int dst_rate);
+{% endhighlight %}
 
 Son utilisation est simple : on fournit l'adresse d'un objet `SDL_AudioCVT` non initialisé, ainsi que les caractéristiques des formats audio : format (voir les constantes définies plus haut), nombre de canaux (1 ou 2 pour mono ou stéréo) et fréquence d'échantillonnage. La fonction renvoie une valeur nulle, si tout s'est bien déroulé.
 
@@ -145,7 +153,9 @@ La conversion des données proprement dite est ensuite fort simple : il suffit d
 
 SDL permet également de mélanger les données de deux échantillons de même format (plus précisément les échantillons doivent avoir le même format audio utilisé pour la restitution). Pour mélanger des échantillons de formats différents, il faudra donc tout d'abord convertir les données vers le format de sortie, par l'intermédiaire du procédé décrit ci-dessus. Il faut cependant garder à l'esprit que ces fonctions de conversion et de mixage sont principalement destinées à être appelées depuis la fonction callback utilisée par SDL, lorsque les tampons audio de sortie doivent être remplis...
 
-`void SDL_MixAudio(Uint8 *dst, Uint8 *src, Uint32 len, int volume); `
+{% highlight c %}
+void SDL_MixAudio(Uint8 *dst, Uint8 *src, Uint32 len, int volume); 
+{% endhighlight %}
 
 L'utilisation de cette fonction est assez évidente : on fournit les adresses des tampons source et destination (qui doivent avoir la même taille, car de même format). Le paramètre `volume` permet d'ajuster le volume de l'échantillon résultant et peut avoir des valeurs comprises entre 0 et 128 (il est recommandé d'utiliser la constante **SDL_MIX_MAXVOLUME** pour le volume maximum).
 
