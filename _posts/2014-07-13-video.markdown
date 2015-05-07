@@ -6,6 +6,8 @@ alt: image-alt
 category: Video
 description: I have an interest in film and video production and have hundreds of videos posted on YouTube and other sites.
 ---
+I tend to do most of my movie editing in Apple's [iMovie](https://www.apple.com/mac/imovie/) (for simple stuff), but have also used [Adobe Premiere Pro](http://www.adobe.com/products/premiere.html) and [Encore](http://tv.adobe.com/product/encore/).
+
 ### YouTube Channels
 * [My main channel](http://www.youtube.com/user/megastep), where I post a variety of things. Lots of footage from concerts I attended, the occasional personal videos, etc.
 * The [Catloaf Software](http://www.youtube.com/user/catloafsoft) channel mostly contains promotional videos for our apps.
