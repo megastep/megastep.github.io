@@ -1,17 +1,19 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="{{ site.locale }}">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="{{ site.locale }}" />
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
     <!-- Open Graph metadata -->
     {% if page.layout == "default" %}
     <meta property="og:title" content="{{ site.title }}" />
     <meta property="og:url" content="{{ site.url }}" />
+    <meta name="twitter:description" content="{{ site.description }}" />
+
     {% else %}
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ page.title | strip_html }}" />
@@ -29,13 +31,17 @@
     <meta property="og:image" content="{{ site.url }}/img/profile.png" />
     <meta property="og:locale" content="{{ site.locale }}" />
 
+    <!-- Twitter Card Summary metadata -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{ site.twitter }}" />
+
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link rel="stylesheet" href="{{ "/style.css" }}">
+    <link rel="stylesheet" href="{{ "/style.css" }}" />
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" }}">
-    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" }}" />
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
