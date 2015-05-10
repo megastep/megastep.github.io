@@ -2,7 +2,8 @@
 layout: default
 modal-id: 3
 img: github.png
-alt: image-alt
+img-url: http://github.com/megastep
+alt: Open Source on Github
 category: Open Source
 description: I have always been a strong proponent of Open-Source Software.<br/>I maintain a number of public projects on both my <a href="http://github.com/megastep">personal GitHub</a> and the <a href="http://github.com/catloafsoft">Catloaf Software organization</a>.
 ---

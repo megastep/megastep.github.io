@@ -2,7 +2,7 @@
 layout: default
 modal-id: 2
 img: linux.png
-alt: image-alt
+alt: Linux
 category: Linux Development
 description: UNIX systems have been an early love in my career as a software developer.<br/>As an early adopter of Linux, all the way to the foundation of modern systems from Apple and Google, UNIX technologies are an important part of my daily work.
 ---
@@ -16,7 +16,7 @@ I am also a seasoned Linux systems administrator, and was responsible for develo
 
 ### Loki Software, Inc.
 
-I worked on the Linux ports of several major video game titles while working at Loki. These included :
+I worked on the Linux ports of several major video game titles while working at [Loki](http://www.lokigames.com/). These included :
 
 * [Myth II: Soulblighter](http://www.lokigames.com/products/myth2/)
 * [Heroes of Might & Magic III](http://www.lokigames.com/products/heroes3/)

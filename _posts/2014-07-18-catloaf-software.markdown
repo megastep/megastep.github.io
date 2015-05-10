@@ -2,10 +2,10 @@
 layout: default
 modal-id: 1
 img: catloaf.png
-alt: image-alt
-client: Start Bootstrap
+img-url: http://www.catloafsoft.com/
+alt: Catloaf Software
 category: iOS Development
-description: As an early enthusiast with mobile development, I founded Catloaf Software to market apps for Apple iOS.
+description: As an early enthusiast with mobile development, I founded <a href="http://www.catloafsoft.com/">Catloaf Software</a> to market apps for Apple iOS.
 ---
 ### iOS Applications
 

@@ -2,7 +2,8 @@
 layout: default
 modal-id: 6
 img: video.png
-alt: image-alt
+img-url: http://www.youtube.com/user/megastep
+alt: Video
 category: Video
 description: I have an interest in film and video production and have hundreds of videos posted on YouTube and other sites.
 ---

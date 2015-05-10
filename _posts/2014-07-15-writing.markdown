@@ -2,7 +2,7 @@
 layout: default
 modal-id: 4
 img: writing.png
-alt: image-alt
+alt: Writing and Blogs
 category: Writing & Blogs
 description: I have been blogging in various places over the years.<br/>I also wrote a few articles for print publications.
 ---

@@ -2,7 +2,7 @@
 layout: default
 modal-id: 5
 img: music.png
-alt: image-alt
+alt: Music
 category: Music
 description: Music is a lifelong passion of mine.<br/>I learned to play keyboards as a kid, then later taught myself guitar and bass.
 ---
@@ -49,7 +49,9 @@ I am otherwise not currently part of any band or studio project, though I have b
 
 For a recent performance of my guitar playing, here is a video of myself performing the classic "Johnny B. Goode" at my wedding in July 2014.
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/SZGYcIKJ55k" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="560" height="315" src="//www.youtube.com/embed/SZGYcIKJ55k" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Online
 
