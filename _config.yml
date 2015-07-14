@@ -51,6 +51,10 @@ social:
     url: http://www.last.fm/user/megascargot
   - title: instagram
     url: https://instagram.com/megastep/
+  - title: tumblr
+    url: http://megastep.tumblr.com/
+  - title: medium
+    url: https://medium.com/@megastep
 
 # Postal address (add as many lines as necessary)
 address:
