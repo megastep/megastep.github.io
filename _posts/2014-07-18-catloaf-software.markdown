@@ -10,7 +10,7 @@ description: As an early enthusiast with mobile development, I founded <a href="
 ### iOS Applications
 
 * [Trainer HD](http://www.trainerhd.com/) is a series of educational games for learning the fretboard of the guitar, bass and other stringed instruments.
-* [Texts From](http://txf.ro), a series of simple apps used to get daily quotes from [Jesus](http://txf.ro/m/jesus), [Oscar Wilde](http://txf.ro/m/wilde) or the [founding fathers of the United States](http://txf.ro/m/fathers).
+* [Texts From](http://txf.ro), a series of simple apps used to get daily quotes from [Jesus](http://jesus.txf.ro), [Oscar Wilde](http://wilde.txf.ro) or the [founding fathers of the United States](http://fathers.txf.ro).
 * [Play Him Off, Keyboard Cat!](http://iphonekeyboardcat.com/), my first iOS app, is essentially a convenient archive of [Keyboard Cat](http://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009.
 
 [![Catloaf Software Apps](img/appstore-badge.png)](http://appstore.catloafsoft.com)
@@ -18,4 +18,4 @@ description: As an early enthusiast with mobile development, I founded <a href="
 ### Java Mobile Applications (J2ME)
 
 * [Guitar Trainer](http://www.mobiletutor.org/guitar) was originally written for older mobile phones (including *Blackberry*), as a J2ME app that could be purchased directly from my [MobileTutor.org](http://www.mobiletutor.org) website.
-* Before the advent of online marketplaces such as the App Store and Google Play, the MobileTutor.org store backend was entirely designed from scratch, with payment processing through PayPal, Amazon, Google Checkout and a number of other mobile payment processors.
+* Before the advent of online marketplaces such as the App Store and Google Play, the [MobileTutor.org](http://www.mobiletutor.org) store backend was entirely designed from scratch, with payment processing through PayPal, Amazon, Google Checkout and a number of other mobile payment processors.
