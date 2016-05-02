@@ -10,7 +10,7 @@ description: As an early enthusiast with mobile development, I founded <a href="
 ### iOS Applications
 
 * [Fretuoso](http://fretuoso.com/) is a series of educational games for learning the fretboard of the guitar, bass and other stringed instruments.
-* [Texts From](http://texts.fr), a series of simple apps used to get daily quotes from [Jesus](http://jesus.texts.fr), [Oscar Wilde](http://wilde.texts.fr), [Donald Trump](http://trump.texts.fr) or the [founding fathers of the United States](http://fathers.texts.fr).
+* [Texts From](http://texts.fr), a series of simple apps used to get daily quotes from [Jesus](http://jesus.texts.fr), [Oscar Wilde](http://wilde.texts.fr), [Donald Trump](http://trump.texts.fr), [Bernie Sanders](http://bernie.texts.fr),  or the [founding fathers of the United States](http://fathers.texts.fr).
 * [Play Him Off, Keyboard Cat!](http://iphonekeyboardcat.com/), my first iOS app, is essentially a convenient archive of [Keyboard Cat](http://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009.
 
 [![Catloaf Software Apps](img/appstore-badge.png)](http://appstore.catloafsoft.com)
