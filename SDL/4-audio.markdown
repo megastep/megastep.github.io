@@ -2,10 +2,13 @@
 layout: article
 title: Programmer des jeux sous Linux avec SDL <br/>Partie IV
 section: Linux Programming
+description: Programmation audio
 tags:
 - linux
 - programming
 - SDL
+seo:
+  type: TechArticle
 locale: fr_FR
 published: Planète Linux numéro 6
 ---

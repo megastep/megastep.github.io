@@ -1,11 +1,14 @@
 ---
 layout: article
 title: Programmer des jeux sous Linux avec SDL
+description: Une série d'articles parus dans le magazine Planète Linux, pour s'initier à la programmation de la librairie multimédia SDL.
 section: Linux Programming
 tags:
 - linux
 - programming
 - SDL
+seo:
+  type: TechArticle
 locale: fr_FR
 ---
 Il s'agit d'une série de cinq articles en français, traitant comme son nom l'indique de la librairie [SDL](http://www.libsdl.org).

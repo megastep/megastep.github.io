@@ -5,7 +5,14 @@ url: http://stephanepeter.com
 description: "Personal site for Stéphane Peter, professional software developer for Catloaf Software, Codehost, Loki Software, and more."
 locale: en_US
 # To enable the Twitter Card features
-twitter: megastep
+twitter: 
+  username: megastep
+facebook:
+  publisher: http://www.facebook.com/megastep
+author:
+  twitter: megastep
+  picture: /img/profile.png
+logo: /img/profile.png
 
 # Contact form: comment the line below if you want to stick with the default PHP contact form
 contact: static
@@ -71,4 +78,8 @@ credits: 'Site based on the Freelancer Bootstrap theme created by <a href="http:
 markdown: kramdown
 permalink: pretty
 highlighter: rouge
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 

@@ -2,41 +2,33 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Language" content="{{ site.locale }}" />
-    <title>{% if page.title %}{{ page.title | strip_html }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="{{ site.description }}" />
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
     <!-- Open Graph metadata -->
     {% if page.layout == "default" %}
-    <meta property="og:title" content="{{ site.title }}" />
-    <meta property="og:url" content="{{ site.url }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
 
     {% else %}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ page.title | strip_html }}" />
-    <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
     <meta property="article:author" content="{{ site.footer.copyright }}" />
-    {% if page.published_time %}
+      {% if page.published_time %}
     <meta property="article:published_time" content="{{ page.published_time }}" />
-    {% endif %}
+      {% endif %}
     <meta property="article:section" content="{{ page.section }}" />
-    {% for tag in page.tags %}
+      {% for tag in page.tags %}
     <meta property="article:tag" content="{{ tag }}" />
-    {% endfor %}
+      {% endfor %}
     {% endif %}
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:image" content="{{ site.url }}/img/profile.png" />
     <meta property="og:locale" content="{{ site.locale }}" />
 
-    <!-- Twitter Card Summary metadata -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@{{ site.twitter }}" />
+    {% seo %}
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="{{ "/style.css" }}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -58,7 +50,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" }}" />
+    <script src="https://use.fontawesome.com/85434f2a0d.js"></script>
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 
