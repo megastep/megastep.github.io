@@ -76,7 +76,7 @@ credits: 'Site based on the Freelancer Bootstrap theme created by <a href="http:
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /section/:title/
 highlighter: rouge
 
 gems:
