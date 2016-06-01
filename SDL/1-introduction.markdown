@@ -3,6 +3,7 @@ layout: article
 title: Programmer des jeux sous Linux avec SDL <br/>Partie I
 description: Introduction à SDL
 section: Linux Programming
+redirect_from: /SDL/progsdl1.html
 tags:
 - linux
 - programming

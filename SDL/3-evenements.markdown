@@ -3,6 +3,7 @@ layout: article
 title: Programmer des jeux sous Linux avec SDL <br/>Partie III
 description: Gestion des évènements
 section: Linux Programming
+redirect_from: /SDL/progsdl3.html
 tags:
 - linux
 - programming
