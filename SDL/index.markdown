@@ -13,7 +13,7 @@ locale: fr_FR
 ---
 Il s'agit d'une série de cinq articles en français, traitant comme son nom l'indique de la librairie [SDL](http://www.libsdl.org).
 
-Ces articles sont parus dans le magazine francais *Planète Linux* (anciennement hors-série Linux de la revue *Freelog*), à partir du numéro 3.
+Ces articles sont parus dans le magazine francais *[Planète Linux](http://www.dppresse.com/?cat=2)* (anciennement hors-série Linux de la revue *Freelog*), à partir du numéro 3.
 
 Ces articles sont diffusés en ligne grâce à l'aimable autorisation de *Planète Linux*.
 
