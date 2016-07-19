@@ -8,9 +8,9 @@ description: UNIX systems have been an early love in my career as a software dev
 ---
 ### Codehost, Inc.
 
-I am currently the lead software engineer for [Codehost](http://www.codehost.com/), where I designed [BrightQ](http://www.brightq.com/), a user-friendly suite of software to distribute and setup printer drivers, based in part on Apple's [CUPS](http://www.cups.org/). Besides Linux, the software was also ported to *Solaris*, *AIX*, *FreeBSD*, and HP-*UX*, with past ports to *SCO* and *IRIX*.
+I am currently the lead software engineer for [Codehost](https://www.codehost.com/), where I designed [BrightQ](https://www.codehost.com/brightq/), a user-friendly suite of software to distribute and setup printer drivers, based in part on Apple's [CUPS](http://www.cups.org/). Besides Linux, the software was also ported to *Solaris*, *AIX*, *FreeBSD*, and HP-*UX*, with past ports to *SCO* and *IRIX*.
 
-It is currently the official UNIX solution for [Canon](http://canon.codehost.com) MFPs in North America, and is also available for other major manufacturers including [Ricoh](http://ricoh.codehost.com), [Sharp](http://sharp.codehost.com/), and more.
+It is currently the official UNIX solution for [Canon](https://www.codehost.com/canon/) MFPs in North America, and is also available for other major manufacturers including [Ricoh](http://ricoh.codehost.com), [Sharp](http://sharp.codehost.com/), and more.
 
 I am also a seasoned Linux systems administrator, and was responsible for developing critical aspects of the Codehost licensing server.
 
