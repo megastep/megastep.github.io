@@ -26,7 +26,7 @@ I worked on the Linux ports of several major video game titles while working at 
 As a developer, I also helped build the then-nascent infrastructure for Linux gaming and worked on several related open-source projects that live on to this day:
 
 * [Loki Setup](http://github.com/megastep/loki_setup), now ported to a variety of other Unix systems and used by Codehost's [BrightQ](http://wwww.brightq.com).
-* [Makeself](http://stephanepeter.com/makeself), initially a relatively simple shell script for creating self-extracting archives I built while at *SciTech*, it is now used as the basis of many popular installers and packages for UNIX systems.
+* [Makeself](http://makeself.io), initially a relatively simple shell script for creating self-extracting archives I built while at *SciTech*, it is now used as the basis of many popular installers and packages for UNIX systems.
 * [Simple Directmedia Layer](http://libsdl.org/): SDL was the core library used when porting games to Linux, and I contributed several patches during my tenure at Loki - including a fun ASCII-art video driver!
 
 ### SciTech Software, Inc.
