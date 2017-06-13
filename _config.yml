@@ -1,14 +1,14 @@
 # Site settings
 title: Stéphane Peter
 email: megastep@megastep.org
-url: http://stephanepeter.com
+url: https://stephanepeter.com
 description: "Personal site for Stéphane Peter, professional software developer for Catloaf Software, Codehost, Loki Software, and more."
 locale: en_US
 # To enable the Twitter Card features
 twitter: 
   username: megastep
 facebook:
-  publisher: http://www.facebook.com/megastep
+  publisher: https://www.facebook.com/megastep
 author:
   twitter: megastep
   picture: /img/profile.png
@@ -39,9 +39,9 @@ footer:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/megastep
+    url: https://twitter.com/megastep
   - title: facebook
-    url: http://facebook.com/megastep
+    url: https://facebook.com/megastep
   - title: linkedin
     url: https://www.linkedin.com/in/stephanepeter
   - title: github
@@ -49,7 +49,7 @@ social:
   - title: stack-overflow
     url: http://stackoverflow.com/users/115287/megastep
   - title: youtube
-    url: http://www.youtube.com/user/megastep
+    url: https://www.youtube.com/user/megastep
   - title: vimeo-square
     url: https://vimeo.com/megastep
   - title: soundcloud
