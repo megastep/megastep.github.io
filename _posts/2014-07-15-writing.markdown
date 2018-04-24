@@ -10,11 +10,11 @@ description: I have been blogging in various places over the years.<br/>I also w
 ### Blogs
 * I occasionally post on my [Tumblr](http://megastep.tumblr.com) and [Medium](https://medium.com/@megastep) blogs.
 * I used to have a pretty active [LiveJournal](http://megastep.livejournal.com/).
-* [The Catloaf Software Blog](http://blog.catloafsoft.com) has official news from my company.
+* [The Catloaf Software Blog](https://www.catloafsoft.com/blog/) has official news from my company.
 
 ### Social Media
-* I have a fairly active [Facebook](http://www.facebook.com/megastep) profile.
-* I am `@megastep` on [Twitter](http://twitter.com/megastep).
+* I have a fairly active [Facebook](https://www.facebook.com/megastep) profile.
+* I am `@megastep` on [Twitter](https://twitter.com/megastep).
 
 ### Published Articles
 * [Overview of Linux Printing Systems](http://www.linuxjournal.com/article/6729), published in [Linux Journal](http://www.linuxjournal.com/) on July 3, 2003.
