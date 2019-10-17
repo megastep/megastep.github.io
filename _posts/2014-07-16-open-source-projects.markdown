@@ -22,3 +22,6 @@ Since April 2015, I have joined the <a href="https://github.com/audiokit">AudioK
 
 I look forward to further contributions to this project as its potential is great for anybody interested in writing audio applications for iOS - including myself!
 
+### Sponsor My Work!
+
+You can now contribute financially to my open-source work by becoming an official [GitHub Sponsor](https://github.com/users/megastep/sponsorship)! Check out the available tiers and feel free to send a few bucks my way - any amount is appreciated!

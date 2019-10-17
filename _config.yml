@@ -2,7 +2,7 @@
 title: Stéphane Peter
 email: megastep@megastep.org
 url: https://stephanepeter.com
-description: "Personal site for Stéphane Peter, professional software developer for Catloaf Software, Codehost, Loki Software, and more."
+description: "Stéphane Peter: professional software developer for Catloaf Software, Codehost, Loki Software, and more."
 locale: en_US
 # To enable the Twitter Card features
 twitter: 
@@ -47,7 +47,7 @@ social:
   - title: github
     url: https://github.com/megastep
   - title: stack-overflow
-    url: http://stackoverflow.com/users/115287/megastep
+    url: https://stackoverflow.com/users/115287/megastep
   - title: youtube
     url: https://www.youtube.com/user/megastep
   - title: vimeo-square
@@ -55,11 +55,11 @@ social:
   - title: soundcloud
     url: https://soundcloud.com/stephanepeter
   - title: lastfm
-    url: http://www.last.fm/user/megascargot
+    url: https://www.last.fm/user/megascargot
   - title: instagram
     url: https://instagram.com/megastep/
   - title: tumblr
-    url: http://megastep.tumblr.com/
+    url: https://megastep.tumblr.com/
   - title: medium
     url: https://medium.com/@megastep
 
@@ -79,7 +79,7 @@ markdown: kramdown
 permalink: /section/:title/
 highlighter: rouge
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
