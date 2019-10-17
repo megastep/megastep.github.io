@@ -24,4 +24,4 @@ I look forward to further contributions to this project as its potential is grea
 
 ### Sponsor My Work!
 
-You can now contribute financially to my open-source work by becoming an official [GitHub Sponsor](https://github.com/users/megastep/sponsorship)! Check out the available tiers and feel free to send a few bucks my way - any amount is appreciated!
+You can now contribute financially to my open-source work by becoming an official [GitHub Sponsor](https://github.com/sponsors/megastep)! Check out the available tiers and feel free to send a few bucks my way - any amount is appreciated!
