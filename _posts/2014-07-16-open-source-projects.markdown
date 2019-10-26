@@ -24,4 +24,6 @@ I look forward to further contributions to this project as its potential is grea
 
 ### Sponsor My Work!
 
+<a class="github-button" href="https://github.com/sponsors/megastep" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @megastep on GitHub">Sponsor</a>
+
 You can now contribute financially to my open-source work by becoming an official [GitHub Sponsor](https://github.com/sponsors/megastep)! Check out the available tiers and feel free to send a few bucks my way - any amount is appreciated!
