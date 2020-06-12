@@ -14,9 +14,15 @@ description: As an early enthusiast with mobile development, I founded <a href="
 * [Play Him Off, Keyboard Cat!](https://iphonekeyboardcat.com/), my first iOS app, is essentially a convenient archive of [Keyboard Cat](http://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009.
 
 
-[![Catloaf Software Apps](img/appstore-badge.png)](http://appstore.catloafsoft.com)
+[![Catloaf Software Apps](img/appstore-badge.png)](https://apps.apple.com/developer/catloaf-software-llc/id316792340)
 
 ### Java Mobile Applications (J2ME)
 
 * [Guitar Trainer](http://www.mobiletutor.org/guitar) was originally written for older mobile phones (including *Blackberry*), as a J2ME app that could be purchased directly from my [MobileTutor.org](http://www.mobiletutor.org) website. The last version is now free to download.
 * Before the advent of online marketplaces such as the App Store and Google Play, the [MobileTutor.org](http://www.mobiletutor.org) store backend was entirely designed from scratch, with payment processing through PayPal, Amazon, Google Checkout and a number of other mobile payment processors.
+
+### Other Catloaf Businesses
+
+* [Catloaf Art](https://catloaf.art) is an online outlet where you can purchase my wife's paintings.
+* [Catloaf Productions](https://catloafprod.com) is dedicated to video production and online artist management.
+* [Catloaf ASMR](https://catloafasmr.com) is a small side project, producing ASMR videos on YouTube for relaxation.
