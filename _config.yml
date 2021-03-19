@@ -69,7 +69,7 @@ address:
   - line: Los Angeles, CA 90009
   - line: United States of America
 
-analytics: UA-1803317-13
+googletag: GTM-NTV73Q3
 
 # Credits content
 credits: 'Site based on the Freelancer Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
