@@ -31,7 +31,6 @@ As a developer, I also helped build the then-nascent infrastructure for Linux ga
 
 ### SciTech Software, Inc.
 
-One of my first experiences as a professional Linux developer was porting the (now defunct) [SciTech Display Doctor](http://en.wikipedia.org/wiki/UniVBE) suite of display drivers to Linux, back in 1998. 
+One of my first experiences as a professional Linux developer was porting the (now defunct) [SciTech Display Doctor](http://en.wikipedia.org/wiki/UniVBE) suite of display drivers to Linux, back in 1998.
 
 I also participated in the Linux port of SciTech's MGL graphics library that was in use by major video game studios at the time, providing direct hardware access to video cards on PC.
-

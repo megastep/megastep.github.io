@@ -16,9 +16,9 @@ My most popular projects include:
 
 ### AudioKit
 
-[AudioKit](http://audiokit.io) is a new open-source audio framework, which was first based on the venerable [Csound](http://www.csounds.com) but now relies on a bevy of technologies including the [Soundpipe](https://github.com/PaulBatchelor/Soundpipe) engine. AudioKit makes it easy for iOS developers to develop powerful audio applications in Objective-C and Swift.
+[AudioKit](https://audiokit.io) is a new open-source audio framework, which was first based on the venerable [Csound](http://www.csounds.com) but now relies on a bevy of technologies including the [Soundpipe](https://github.com/PaulBatchelor/Soundpipe) engine. AudioKit makes it easy for iOS developers to develop powerful audio applications in Objective-C and Swift.
 
-Since April 2015, I have joined the <a href="https://github.com/audiokit">AudioKit organization</a> as a developer and have contributed many commits, including helping reorganizing AudioKit as a proper static library, lots of general fixes, improvements to audio plots, and more.
+Since April 2015, I have joined the [AudioKit](https://github.com/audiokit) organization as a developer and have contributed many commits, including helping reorganizing AudioKit as a proper static library, lots of general fixes, improvements to audio plots, and more.
 
 I look forward to further contributions to this project as its potential is great for anybody interested in writing audio applications for iOS - including myself!
 
