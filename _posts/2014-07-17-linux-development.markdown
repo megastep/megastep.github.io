@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: article
 modal-id: 2
+sitemap: false
 img: linux.png
 alt: Linux
 category: Linux Development

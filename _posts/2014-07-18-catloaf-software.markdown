@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: article
 modal-id: 1
+sitemap: false
 img: catloaf.png
 img-url: https://www.catloafsoft.com/
 alt: Catloaf Software

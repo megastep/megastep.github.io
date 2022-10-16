@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: article
 modal-id: 4
+sitemap: false
 img: writing.png
 alt: Writing and Blogs
 category: Writing & Blogs

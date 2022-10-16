@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: article
 modal-id: 3
+sitemap: false
 img: github.png
 img-url: https://github.com/megastep
 alt: Open Source on Github

@@ -1,13 +1,14 @@
 ---
-layout: default
+layout: article
 modal-id: 6
+sitemap: false
 img: video.png
 img-url: https://www.youtube.com/user/megastep
 alt: Video
 category: Video
 description: I have an interest in film and video production and have hundreds of videos posted on YouTube and other sites.
 ---
-I tend to do most of my video editing in [Adobe Premiere Pro](http://www.adobe.com/products/premiere.html). 
+I do most of my video editing in [Adobe Premiere Pro](http://www.adobe.com/products/premiere.html).
 
 ### YouTube Channels
 
@@ -22,4 +23,3 @@ I tend to do most of my video editing in [Adobe Premiere Pro](http://www.adobe.c
 ### Other Sites
 
 * I also have a few videos posted on my [Vimeo account](https://vimeo.com/megastep).
-
