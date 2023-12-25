@@ -6,14 +6,14 @@ img: catloaf.png
 img-url: https://www.catloafsoft.com/
 alt: Catloaf Software
 category: iOS Development
-description: As an early enthusiast with mobile development, I founded <a href="https://www.catloafsoft.com/">Catloaf Software</a> to market apps for Apple iOS.
+description: As an early enthusiast with mobile development, I founded <a href="https://www.catloafsoft.com/">Catloaf Software</a> to market apps for Apple platforms.
 ---
-### iOS Applications
+### Mobile Applications
 
 * [Fretuoso](https://fretuoso.app/) is an educational game for learning the fretboard of the guitar, bass and other stringed instruments.
-* [Text With](https://textwith.me) is a series of educational AI chatbot apps, allowing the user to have deep conversations with historical figures (in [Text With History](https://textwith.me/history)) and Biblical characters (in [Text With Jesus](https://textwith.me/jesus)). The apps are powered by the *ChatGPT* AI engine, and are available for free on the App Store.
+* [Text With](https://textwith.me) is a series of educational AI chatbot apps, allowing the user to have deep conversations with historical figures (in [Text With History](https://textwith.me/history)) and Biblical characters (in [Text With Jesus](https://textwith.me/jesus)). The apps are powered by the *ChatGPT* engine from OpenAI, and are available for free on the Apple App Store, [Google Play Store](https://play.google.com/store/apps/dev?id=8182293785712256064) and as a [Web app](https://textwith.app/).
 * [Texts From](https://texts.fr), a series of simple apps used to get daily quotes from [Jesus](https://jesus.texts.fr), [Oscar Wilde](https://wilde.texts.fr), [Donald Trump](https://trump.texts.fr), [Bernie Sanders](https://bernie.texts.fr),  or the [Founding Fathers of the United States](https://fathers.texts.fr).
-* [Play Him Off, Keyboard Cat!](https://iphonekeyboardcat.com/), my first iOS app, is essentially a convenient archive of [Keyboard Cat](http://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009.
+* [Play Him Off, Keyboard Cat!](https://iphonekeyboardcat.com/), my first iOS app, was essentially a convenient archive of [Keyboard Cat](http://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009. It is no longer being maintained.
 
 [![Catloaf Software Apps](img/appstore-badge.png)](https://apps.apple.com/developer/catloaf-software-llc/id316792340)
 
