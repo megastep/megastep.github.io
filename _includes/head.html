@@ -35,20 +35,23 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "{{ site.title }}",
-      "url": "{{ site.url }}",
-      "sameAs": [
-        {% for social in site.social %}"{{ social.url }}"{% if forloop.last == false %},
-        {% endif %}{% endfor %}
-      ],
-      "jobTitle": "Software Engineer, Musician, Entrepreneur",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Catloaf Software, LLC"
-      },
-      "image": "{{ site.url }}{{ site.logo }}",
-      "description": "{{ site.description }}"
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}",
+        "sameAs": [
+          {% for social in site.social %}"{{ social.url }}"{% if forloop.last == false %},
+          {% endif %}{% endfor %}
+        ],
+        "jobTitle": "Software Engineer, Musician, Entrepreneur",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Catloaf Software, LLC"
+        },
+        "image": "{{ site.url }}{{ site.logo }}",
+        "description": "{{ site.description }}"
+      }
     }
     </script>
   
