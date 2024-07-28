@@ -32,6 +32,26 @@
 
     {% seo %}
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "sameAs": [
+        {% for social in site.social %}"{{ social.url }}"{% if forloop.last == false %},
+        {% endif %}{% endfor %}
+      ],
+      "jobTitle": "Software Engineer, Musician, Entrepreneur",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Catloaf Software, LLC"
+      },
+      "image": "{{ site.url }}{{ site.logo }}",
+      "description": "{{ site.description }}"
+    }
+    </script>
+  
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="{{ "/style.css" }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -61,8 +81,8 @@
 
     <!-- Custom Fonts -->
     <script src="https://kit.fontawesome.com/5dcef3d00e.js" crossorigin="anonymous"></script>
-    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
