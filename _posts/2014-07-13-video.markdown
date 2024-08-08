@@ -8,7 +8,7 @@ alt: Video
 category: Video
 description: I have an interest in film and video production and have hundreds of videos posted on YouTube and other sites.
 ---
-I do most of my video editing in [Adobe Premiere Pro](http://www.adobe.com/products/premiere.html).
+I do most of my video editing in [Adobe Premiere Pro](https://www.adobe.com/products/premiere.html).
 
 ### YouTube Channels
 

@@ -85,4 +85,4 @@ main(int argc, char *argv[])
 
 ### Références:
 
-SDL Home Page : [www.libsdl.org](http://www.libsdl.org)
+SDL Home Page : [www.libsdl.org](https://www.libsdl.org)

@@ -157,7 +157,7 @@ A titre de référence, une ligne de commande typique pour compiler l'un des pro
 
 ----
 
-Pour plus de détails: [libsdl.org](http://www.libsdl.org/)
+Pour plus de détails: [libsdl.org](https://www.libsdl.org/)
 
 ----
 

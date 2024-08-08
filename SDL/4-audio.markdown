@@ -179,7 +179,7 @@ Afin de faciliter davantage la gestion du son, la bibliothèque annexe '*SDL Mix
 * Possibilité d'affecter une fonction callback à un canal.
 
 Bref cette bibliothèque est le compagnon idéal du programmeur de jeu. Elle a été utilisée avec succès pour le portage de plusieurs jeux Loki (notamment, *Civilization : Call to Power*, *Railroad Tycoon II* et *Heroes of Might & Magic III*). 
-Son API est très intuitive et vous pouvez obtenir plus d'informations en la téléchargeant sur le site Web de SDL: [libsdl.org](http://www.libsdl.org/)
+Son API est très intuitive et vous pouvez obtenir plus d'informations en la téléchargeant sur le site Web de SDL: [libsdl.org](https://www.libsdl.org/)
 
 ### Conclusion
 

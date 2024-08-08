@@ -205,7 +205,7 @@ Dans le prochain article, nous aborderons un domaine complètement différent et
 
 ----
 
-SDL Home Page: [libsdl.org](http://www.libsdl.org)
+SDL Home Page: [libsdl.org](https://www.libsdl.org)
 
 ### Encadré 1 : Un programme utilisant les événements.
 

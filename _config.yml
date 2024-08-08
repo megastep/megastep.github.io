@@ -74,7 +74,7 @@ address:
 googletag: GTM-NTV73Q3
 
 # Credits content
-credits: 'Site based on the Freelancer Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: 'Site based on the Freelancer Bootstrap theme created by <a href="https://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
