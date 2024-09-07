@@ -1,0 +1,10 @@
+---
+layout: null
+sitemap: false
+permalink: /_redirects
+---
+/SDL/progsdl1.html  /SDL/1-introduction/ 301
+/SDL/progsdl2.html  /SDL/2-graphique/ 301
+/SDL/progsdl3.html  /SDL/3-evenements/ 301
+/SDL/progsdl4.html  /SDL/4-audio/ 301
+/SDL/progsdl5.html  /SDL/5-utilitaires/ 301

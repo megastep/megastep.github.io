@@ -27,8 +27,8 @@
     {% endif %}
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:title" content="{{ site.title }}" />
-    <meta property="og:image" content="{{ site.url }}/img/banner.jpg" />
-    <meta property="twitter:image" content="{{ site.url }}/img/banner.jpg" />
+    <meta property="og:image" content="{{ site.url }}{{ site.imgprefix }}/img/banner.jpg" />
+    <meta property="twitter:image" content="{{ site.url }}{{ site.imgprefix }}/img/banner.jpg" />
     <meta property="og:locale" content="{{ site.locale }}" />
 
     {% seo %}
@@ -50,7 +50,7 @@
           "@type": "Organization",
           "name": "Catloaf Software, LLC"
         },
-        "image": "{{ site.url }}{{ site.logo }}",
+        "image": "{{ site.url }}{{ site.imgprefix }}{{ site.logo }}",
         "description": "{{ site.description }}"
       }
     }

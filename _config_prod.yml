@@ -1,0 +1,2 @@
+# For deploying on Cloudflare
+imgprefix: "/cdn-cgi/image/format=auto,onerror=redirect"

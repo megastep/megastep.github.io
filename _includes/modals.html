@@ -17,7 +17,7 @@
 			    {% if post.img-url %}
 			    <a href="{{ post.img-url }}">
 			    {% endif %}
-                             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}"/>
+                             <img src="{{ site.imgprefix }}/img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}"/>
 			    {% if post.img-url %}
 			    </a>
 			    {% endif %}
