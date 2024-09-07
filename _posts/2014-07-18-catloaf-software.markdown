@@ -15,7 +15,7 @@ description: As an early enthusiast with mobile development, I founded <a href="
 * [Texts From](https://texts.fr), a series of simple apps used to get daily quotes from [Jesus](https://jesus.texts.fr), [Oscar Wilde](https://wilde.texts.fr), [Donald Trump](https://trump.texts.fr), [Bernie Sanders](https://bernie.texts.fr),  or the [Founding Fathers of the United States](https://fathers.texts.fr).
 * [Play Him Off, Keyboard Cat!](https://iphonekeyboardcat.com/), my first iOS app, was essentially a convenient archive of [Keyboard Cat](https://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009. It is no longer being maintained.
 
-[![Catloaf Software Apps]({{ site.imgprefix }}img/appstore-badge.png)](https://apps.apple.com/developer/catloaf-software-llc/id316792340)
+[![Catloaf Software Apps]({{ site.imgprefix }}/img/appstore-badge.png)](https://apps.apple.com/developer/catloaf-software-llc/id316792340)
 
 ### Java Mobile Applications (J2ME)
 

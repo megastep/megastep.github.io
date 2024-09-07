@@ -85,5 +85,4 @@ highlighter: rouge
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-redirect-from
 

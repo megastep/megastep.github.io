@@ -3,7 +3,6 @@ layout: article
 title: Programmer des jeux sous Linux avec SDL <br/>Partie V
 section: Linux Programming
 description: Fonctions utilitaires
-redirect_from: /SDL/progsdl5.html
 tags:
 - linux
 - programming

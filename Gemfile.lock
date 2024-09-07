@@ -70,8 +70,6 @@ GEM
       jekyll (>= 3.5)
       json-minify (~> 0.0.3)
       uglifier (~> 4.1)
-    jekyll-redirect-from (0.16.0)
-      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
@@ -188,7 +186,6 @@ DEPENDENCIES
   csv
   jekyll
   jekyll-minifier
-  jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
   webrick

@@ -8,3 +8,5 @@ permalink: /_redirects
 /SDL/progsdl3.html  /SDL/3-evenements/ 301
 /SDL/progsdl4.html  /SDL/4-audio/ 301
 /SDL/progsdl5.html  /SDL/5-utilitaires/ 301
+/makeself  https://makeself.io/ 301
+/makeself.html  https://makeself.io/ 301
