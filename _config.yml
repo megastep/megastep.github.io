@@ -39,12 +39,16 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
+  - title: x-twitter
     url: https://x.com/megastep
   - title: facebook
     url: https://facebook.com/megastep
+  - title: bluesky
+    url: https://bsky.app/profile/stephanepeter.com
   - title: linkedin
     url: https://www.linkedin.com/in/stephanepeter
+  - title: mastodon
+    url: https://me.dm/@megastep
   - title: github
     url: https://github.com/megastep
   - title: stack-overflow
@@ -63,14 +67,6 @@ social:
     url: https://megastep.tumblr.com/
   - title: medium
     url: https://angryfrenchman.org/
-  - title: mastodon
-    url: https://me.dm/@megastep
-
-# Postal address (add as many lines as necessary)
-address:
-  - line: P.O. Box 91506
-  - line: Los Angeles, CA 90009
-  - line: United States of America
 
 googletag: GTM-NTV73Q3
 

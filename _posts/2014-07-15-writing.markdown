@@ -2,7 +2,7 @@
 layout: article
 modal-id: 4
 sitemap: false
-img: writing.png
+img: writing.jpg
 alt: Writing and Blogs
 category: Writing & Blogs
 description: I have been blogging in various places over the years.<br/>I also wrote a few articles for print publications.

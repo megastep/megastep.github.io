@@ -2,7 +2,7 @@
 layout: article
 modal-id: 3
 sitemap: false
-img: github.png
+img: github.jpg
 img-url: https://github.com/megastep
 alt: Open Source on Github
 category: Open Source

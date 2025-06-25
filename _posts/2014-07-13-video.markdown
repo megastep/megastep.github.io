@@ -2,7 +2,7 @@
 layout: article
 modal-id: 6
 sitemap: false
-img: video.png
+img: video.jpg
 img-url: https://www.youtube.com/user/megastep
 alt: Video
 category: Video

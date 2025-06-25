@@ -2,7 +2,7 @@
 layout: article
 modal-id: 2
 sitemap: false
-img: linux.png
+img: linux.jpg
 alt: Linux
 category: Linux Development
 description: UNIX systems have been an early love in my career as a software developer.<br/>As an early adopter of Linux, all the way to the foundation of modern systems from Apple and Google, UNIX technologies are an important part of my daily work.
