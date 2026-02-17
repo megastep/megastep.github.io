@@ -246,6 +246,19 @@ section.success {
     background: #{{ site.color.primary }};
 }
 
+section.success a,
+section.success a:visited {
+    color: #fff;
+}
+
+section.success a:hover,
+section.success a:focus,
+section.success a:active,
+section.success a.active {
+    color: #fff;
+    text-decoration: underline;
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
