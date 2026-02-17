@@ -11,14 +11,14 @@
             <div class="row">
                 {% for post in site.posts %}
                     <div class="col-sm-4 portfolio-item">
-                        <a href="#modal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                        <a href="#modal-{{ post.modal-id }}" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#modal-{{ post.modal-id }}">
                             <div class="caption">
                                 <div class="caption-content">
                                     <i class="fa fa-search-plus fa-3x"></i>
 				    <p>{{ post.title }}</p>
                                 </div>
                             </div>
-                            <img src="{{ site.imgprefix }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" width="900" height="650" loading="lazy" decoding="async">
+                            <img src="{{ site.imgprefix }}/img/portfolio/{{ post.img }}" class="img-fluid" alt="{{ post.alt }}" width="900" height="650" loading="lazy" decoding="async">
                         </a>
                     </div>
                 {% endfor %}

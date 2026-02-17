@@ -47,7 +47,9 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 5px;
+    border-top: solid 5px currentColor;
+    color: inherit;
+    opacity: 1;
     text-align: center;
 }
 
@@ -63,20 +65,16 @@ hr.star-primary:after {
 }
 
 hr.star-light {
-    border-color: #fff;
+    color: #fff;
 }
 
 hr.star-light:after {
-    color: #fff;
+    color: currentColor;
     background-color: #{{ site.color.primary }};
 }
 
-hr.star-primary {
-    border-color: #{{ site.color.secondary }};
-}
-
 hr.star-primary:after {
-    color: #{{ site.color.secondary }};
+    color: currentColor;
     background-color: #fff;
 }
 
@@ -141,50 +139,94 @@ header .intro-text .article-published {
 }
 
 @media(min-width:768px) {
-    .navbar-fixed-top {
+    .navbar.fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
 
-    .navbar-fixed-top .navbar-brand {
+    .navbar.fixed-top .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
 
-    .navbar-fixed-top.navbar-shrink {
+    .navbar.fixed-top.navbar-shrink {
         padding: 10px 0;
     }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
+    .navbar.fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
 }
 
 .navbar {
+    --bs-navbar-color: #fff;
+    --bs-navbar-hover-color: #{{ site.color.primary }};
+    --bs-navbar-active-color: #{{ site.color.primary }};
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #{{ site.color.primary }};
+    --bs-navbar-toggler-border-color: rgba(255,255,255,.6);
+    --bs-navbar-toggler-icon-bg: none;
+    border: 0;
+    background-color: #{{ site.color.secondary }};
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
-.navbar a:focus {
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar .nav-link:visited,
+.navbar .navbar-brand:visited {
+    color: #fff !important;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .navbar-brand:focus,
+.navbar .nav-link:focus {
+    color: #{{ site.color.primary }};
+}
+
+.navbar .nav-link.active {
+    color: #{{ site.color.primary }} !important;
+}
+
+.navbar a:focus,
+.navbar button:focus {
     outline: 0;
 }
 
-.navbar .navbar-nav {
+.navbar .navbar-nav,
+.navbar .navbar-nav .nav-link {
     letter-spacing: 1px;
 }
 
-.navbar .navbar-nav li a:focus {
-    outline: 0;
+.navbar-toggler {
+    border-color: rgba(255,255,255,.6);
 }
 
-.navbar-default,
-.navbar-inverse {
-    border: 0;
+.navbar-toggler .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+}
+
+.navbar-toggler .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+footer .social-list {
+    margin: 0;
+    padding-left: 0;
 }
 
 section {
@@ -272,9 +314,15 @@ section.success {
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
-    color: #fff;
+    color: #fff !important;
     background: 0 0;
     transition: all .3s ease-in-out;
+}
+
+.btn-outline:visited,
+.btn-outline:focus,
+.btn-outline:active {
+    color: #fff !important;
 }
 
 .btn-outline:hover,
@@ -441,6 +489,8 @@ div .article {
     right: 25px;
     width: 75px;
     height: 75px;
+    border: 0;
+    padding: 0;
     background-color: transparent;
     cursor: pointer;
 }

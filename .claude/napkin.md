@@ -16,3 +16,8 @@
 - Implemented SEO remediation changes across templates/layouts/content/sitemap and added validation notes under `seo/`.
 - Ran into Lighthouse limitation: CLI installed via temporary npm cache, but audit failed because Chrome is unavailable in current environment.
 - Corrected two implementation mistakes during verification: removed duplicate TechArticle JSON-LD and tightened sitemap filtering to exclude non-HTML asset URLs.
+- Implemented Bootstrap 5 + vanilla JS migration on `codex/seo-remediation-implementation` by replacing Bootstrap/jQuery runtime includes and converting nav/modal/grid markup to Bootstrap 5 attributes/classes.
+- Added `js/site.js` to replace legacy jQuery behaviors (smooth scroll, navbar shrink, mobile collapse close, scrollspy, floating labels).
+- Re-hit Jekyll `_site` concurrent build race when running two builds in parallel; sequential builds are required for reliable validation.
+- Initially added a new checklist file under `seo/`, then realized `.gitignore` excludes new `seo/*` files; moved checklist content into tracked `seo/BOOTSTRAP-JQUERY-MIGRATION-EPIC.md` instead.
+- Added `/llms.txt` and updated `/robots.txt` to allow crawler discovery of llms guidance while keeping sitemap directive.

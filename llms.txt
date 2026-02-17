@@ -1,0 +1,25 @@
+# Stéphane Peter
+
+Official website: https://stephanepeter.com
+
+## About
+- Name: Stéphane Peter
+- Role: Software Engineer, Musician, Entrepreneur
+- Location: Los Angeles, California
+- Education: Masters Degree in Computer Science, University of Nice
+
+## Focus Areas
+- Cross-platform product engineering
+- iOS and web application development
+- AI-assisted educational software
+- Open-source software maintenance
+
+## Primary Sections
+- Homepage and portfolio: https://stephanepeter.com/
+- SDL tutorials (French): https://stephanepeter.com/SDL/
+- Resume (PDF): https://stephanepeter.com/files/StephanePeter.pdf
+
+## Contact
+- Email: megastep@megastep.org
+- LinkedIn: https://www.linkedin.com/in/stephanepeter
+- GitHub: https://github.com/megastep
