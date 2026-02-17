@@ -7,12 +7,14 @@ locale: en_US
 # To enable the Twitter Card features
 twitter: 
   username: megastep
+  card: summary_large_image
 facebook:
   publisher: https://www.facebook.com/megastep
 author:
   twitter: megastep
   picture: /img/profile.png
 logo: /img/profile.png
+image: /img/banner.jpg
 imgprefix: ""
 
 # Contact form: comment the line below if you want to stick with the default PHP contact form
@@ -82,4 +84,3 @@ highlighter: rouge
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-

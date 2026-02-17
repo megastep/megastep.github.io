@@ -4,4 +4,5 @@ layout: null
 User-agent: *
 Allow:
 Sitemap: {{ site.url }}/sitemap.xml
-
+# AI crawler guidance
+Allow: /llms.txt

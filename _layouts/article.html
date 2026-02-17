@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<html lang="{{ page.locale | default: site.locale | replace: '_', '-' }}" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     {% include head.html %}
     <body id="page-top" class="index">
     {% include gtm_body.html %}
@@ -7,7 +7,7 @@
     {% include header_article.html %}
     <div class="container">
         <div class="row">
-           <div class="col-lg-10 col-lg-offset-1 article" lang="{{ page.locale }}">
+           <div class="col-lg-10 offset-lg-1 article" lang="{{ page.locale | default: site.locale | replace: '_', '-' }}">
     		{{ content }}
 	   </div>
 	</div>

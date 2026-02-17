@@ -10,6 +10,8 @@ tags:
 seo:
   type: TechArticle
 locale: fr_FR
+published_time: 2003-12-01T00:00:00+01:00
+last_modified: 2026-02-16
 published: Planète Linux numéro 6
 ---
 ## Programmation audio

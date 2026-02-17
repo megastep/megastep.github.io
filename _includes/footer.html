@@ -6,9 +6,9 @@
                 <div class="row">
                     <div class="footer-col col-md-9">
                         <h3>{{ site.footer.social }}</h3>
-                        <ul class="list-inline">
+                        <ul class="list-inline social-list">
                             {% for network in site.social %}
-                            <li>
+                            <li class="list-inline-item">
                                 <a rel="me" href="{{ network.url }}" class="btn-social btn-outline"><i class="fa-brands fa-{{ network.title }}"></i></a>
                             </li>
 		                    {% endfor %}
