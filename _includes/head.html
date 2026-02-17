@@ -1,62 +1,97 @@
 <head>
+    {% assign page_locale_raw = page.locale | default: site.locale %}
+    {% assign page_locale = page_locale_raw | replace: "_", "-" %}
+    {% assign is_sdl_page = false %}
+    {% if page.path and page.path contains "SDL/" %}
+      {% assign is_sdl_page = true %}
+    {% endif %}
+    {% assign homepage_url = "/" | absolute_url %}
+    {% assign default_fr_url = "/SDL/" | absolute_url %}
+    {% assign page_url = page.url | absolute_url %}
+    {% assign fr_url = default_fr_url %}
+    {% assign en_url = page_url %}
+    {% if is_sdl_page %}
+      {% assign fr_url = page_url %}
+      {% assign en_url = homepage_url %}
+    {% endif %}
+
     {% include gtm.html %}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Language" content="{{ site.locale }}" />
+    <meta http-equiv="Content-Language" content="{{ page_locale }}" />
     <meta name="viewport" content="width=device-width" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
-    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 
-    <!-- Open Graph metadata -->
-    {% if page.layout == "default" %}
-    <meta name="twitter:description" content="{{ site.description }}" />
-    <meta name="description" content="{{ site.description }}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="og:type" content="website" />
+    <link rel="alternate" hreflang="en" href="{{ en_url }}" />
+    <link rel="alternate" hreflang="fr" href="{{ fr_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ homepage_url }}" />
 
-    {% else %}
-    <meta property="og:type" content="article" />
-    <meta property="article:author" content="{{ site.footer.copyright }}" />
-      {% if page.published_time %}
-    <meta property="article:published_time" content="{{ page.published_time }}" />
-      {% endif %}
-    <meta property="article:section" content="{{ page.section }}" />
-      {% for tag in page.tags %}
-    <meta property="article:tag" content="{{ tag }}" />
-      {% endfor %}
-    {% endif %}
-    <meta property="og:site_name" content="{{ site.title }}" />
-    <meta property="og:title" content="{{ site.title }}" />
-    <meta property="og:image" content="{{ site.url }}{{ site.imgprefix }}/img/banner.jpg" />
-    <meta property="twitter:image" content="{{ site.url }}{{ site.imgprefix }}/img/banner.jpg" />
-    <meta property="og:locale" content="{{ site.locale }}" />
+    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com" crossorigin>
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://buttons.github.io">
 
     {% seo %}
 
+    {% if page.layout == "default" %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfilePage",
       "mainEntity": {
         "@type": "Person",
-        "name": "{{ site.title }}",
-        "url": "{{ site.url }}",
+        "name": {{ site.title | jsonify }},
+        "url": {{ site.url | jsonify }},
         "sameAs": [
-          {% for social in site.social %}"{{ social.url }}"{% if forloop.last == false %},
-          {% endif %}{% endfor %}
+          {% for social in site.social %}
+          {{ social.url | jsonify }}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
         ],
         "jobTitle": "Software Engineer, Musician, Entrepreneur",
         "worksFor": {
           "@type": "Organization",
           "name": "Catloaf Software, Inc."
         },
-        "image": "{{ site.url }}{{ site.imgprefix }}{{ site.logo }}",
-        "description": "{{ site.description }}"
+        "image": {{ site.logo | absolute_url | jsonify }},
+        "description": {{ site.description | jsonify }}
       }
     }
     </script>
-  
-    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    {% endif %}
+
+    {% if page.layout == "article" and page.seo and page.seo.type == "TechArticle" and is_sdl_page %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {{ homepage_url | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SDL",
+          "item": {{ default_fr_url | jsonify }}
+        }{% if page.url != "/SDL/" %},
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | strip_html | jsonify }},
+          "item": {{ page_url | jsonify }}
+        }{% endif %}
+      ]
+    }
+    </script>
+    {% endif %}
+
+    <!-- Custom CSS & Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/style.css" }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -84,14 +119,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Custom Fonts -->
-    <script src="https://kit.fontawesome.com/5dcef3d00e.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/5dcef3d00e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>

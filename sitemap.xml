@@ -1,0 +1,44 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign docs = site.pages | concat: site.posts | sort: "url" %}
+{% for doc in docs %}
+  {% if doc.url %}
+    {% assign skip_doc = false %}
+    {% if doc.sitemap == false %}
+      {% assign skip_doc = true %}
+    {% endif %}
+    {% if doc.url contains ".xml" or doc.url contains ".json" %}
+      {% assign skip_doc = true %}
+    {% endif %}
+    {% if doc.url contains "." %}
+      {% assign skip_doc = true %}
+    {% endif %}
+    {% if doc.url contains "/assets/" %}
+      {% assign skip_doc = true %}
+    {% endif %}
+    {% unless skip_doc %}
+      {% assign lastmod = doc.last_modified | default: doc.date | default: site.time %}
+      {% assign changefreq = "monthly" %}
+      {% assign priority = "0.6" %}
+      {% if doc.url == "/" %}
+        {% assign priority = "1.0" %}
+      {% elsif doc.url == "/SDL/" %}
+        {% assign changefreq = "yearly" %}
+        {% assign priority = "0.8" %}
+      {% elsif doc.url contains "/SDL/" %}
+        {% assign changefreq = "yearly" %}
+        {% assign priority = "0.7" %}
+      {% endif %}
+  <url>
+    <loc>{{ doc.url | absolute_url }}</loc>
+    <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+    <changefreq>{{ changefreq }}</changefreq>
+    <priority>{{ priority }}</priority>
+  </url>
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+</urlset>
