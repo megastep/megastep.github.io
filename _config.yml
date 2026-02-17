@@ -27,6 +27,7 @@ color:
 exclude:
   - screenshot.png
   - README.md
+  - AGENTS.md
   - LICENCE
   - CNAME
 
