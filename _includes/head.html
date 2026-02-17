@@ -5,15 +5,9 @@
       {% assign is_sdl_page = true %}
     {% endif %}
     {% assign homepage_url = "/" | absolute_url %}
-    {% assign default_fr_url = "/SDL/" | absolute_url %}
     {% assign page_url = page.url | absolute_url %}
-    {% if is_sdl_page %}
-      {% assign en_url = homepage_url %}
-      {% assign fr_url = page_url %}
-    {% else %}
-      {% assign en_url = page_url %}
-      {% assign fr_url = default_fr_url %}
-    {% endif %}
+    {% assign en_url = page_url %}
+    {% assign fr_url = page_url %}
 
     {% include gtm.html %}
     <meta charset="utf-8" />
@@ -22,8 +16,11 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
-    <link rel="alternate" hreflang="en" href="{{ en_url }}" />
+    {% if is_sdl_page %}
     <link rel="alternate" hreflang="fr" href="{{ fr_url }}" />
+    {% else %}
+    <link rel="alternate" hreflang="en" href="{{ en_url }}" />
+    {% endif %}
     <link rel="alternate" hreflang="x-default" href="{{ homepage_url }}" />
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -77,7 +74,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "SDL",
-          "item": {{ default_fr_url | jsonify }}
+          "item": {{ "/SDL/" | absolute_url | jsonify }}
         }{% if page.url != "/SDL/" %},
         {
           "@type": "ListItem",
@@ -92,7 +89,7 @@
 
     <!-- Custom CSS & Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/style.css" }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     {% if page.layout == "default" %}
     <script async defer src="https://buttons.github.io/buttons.js"></script>

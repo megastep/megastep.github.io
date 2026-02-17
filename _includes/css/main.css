@@ -198,9 +198,10 @@ header .intro-text .article-published {
     color: #{{ site.color.primary }} !important;
 }
 
-.navbar a:focus,
-.navbar button:focus {
-    outline: 0;
+.navbar a:focus-visible,
+.navbar button:focus-visible {
+    outline: 3px solid #{{ site.color.primary }};
+    outline-offset: 2px;
 }
 
 .navbar .navbar-nav,

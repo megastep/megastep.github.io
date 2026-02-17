@@ -7,7 +7,7 @@
     {% include header_article.html %}
     <div class="container">
         <div class="row">
-           <div class="col-lg-10 offset-lg-1 article" lang="{{ page.locale }}">
+           <div class="col-lg-10 offset-lg-1 article" lang="{{ page.locale | default: site.locale | replace: '_', '-' }}">
     		{{ content }}
 	   </div>
 	</div>

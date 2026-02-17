@@ -13,7 +13,19 @@ layout: null
     {% if doc.url contains ".xml" or doc.url contains ".json" %}
       {% assign skip_doc = true %}
     {% endif %}
-    {% if doc.url contains "." %}
+    {% if doc.url contains ".txt"
+      or doc.url contains ".css"
+      or doc.url contains ".js"
+      or doc.url contains ".png"
+      or doc.url contains ".jpg"
+      or doc.url contains ".jpeg"
+      or doc.url contains ".gif"
+      or doc.url contains ".svg"
+      or doc.url contains ".ico"
+      or doc.url contains ".pdf"
+      or doc.url contains ".webmanifest"
+      or doc.url contains ".php"
+      or doc.url contains ".webp" %}
       {% assign skip_doc = true %}
     {% endif %}
     {% if doc.url contains "/assets/" %}

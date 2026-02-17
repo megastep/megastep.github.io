@@ -21,3 +21,5 @@
 - Re-hit Jekyll `_site` concurrent build race when running two builds in parallel; sequential builds are required for reliable validation.
 - Initially added a new checklist file under `seo/`, then realized `.gitignore` excludes new `seo/*` files; moved checklist content into tracked `seo/BOOTSTRAP-JQUERY-MIGRATION-EPIC.md` instead.
 - Added `/llms.txt` and updated `/robots.txt` to allow crawler discovery of llms guidance while keeping sitemap directive.
+- Addressed final PR thread set for migration follow-up: added SRI/referrerpolicy to Bootstrap CDN assets, restored keyboard focus-visible styling, corrected sitemap exclusion logic, normalized article lang BCP-47 output, tightened hreflang self-language behavior, and restored non-static contact script path.
+- Revalidated with sequential default + production Jekyll builds; both passed.
