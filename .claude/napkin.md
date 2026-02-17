@@ -23,3 +23,7 @@
 - Added `/llms.txt` and updated `/robots.txt` to allow crawler discovery of llms guidance while keeping sitemap directive.
 - Addressed final PR thread set for migration follow-up: added SRI/referrerpolicy to Bootstrap CDN assets, restored keyboard focus-visible styling, corrected sitemap exclusion logic, normalized article lang BCP-47 output, tightened hreflang self-language behavior, and restored non-static contact script path.
 - Revalidated with sequential default + production Jekyll builds; both passed.
+- Mistake: used `gh pr comment 6` without explicit `--repo`, which targeted wrong default repo context; also used unescaped backticks in shell string causing command-substitution side effects.
+- Fix: switched to explicit `gh api repos/megastep/megastep.github.io/issues/6/comments` with plain-text body and removed accidental cross-repo comment via API delete.
+- Restored Bootstrap 5 navbar active-state background styling for ScrollSpy-highlighted section links via `.navbar .nav-item .nav-link.active` to match pre-migration behavior.
+- Replaced unreliable Bootstrap ScrollSpy init with explicit vanilla scroll-based section highlighter in `js/site.js` so nav active state updates deterministically during scrolling.
