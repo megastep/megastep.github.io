@@ -1,6 +1,5 @@
 <head>
-    {% assign page_locale_raw = page.locale | default: site.locale %}
-    {% assign page_locale = page_locale_raw | replace: "_", "-" %}
+    {% assign page_locale = page.locale | default: site.locale | replace: "_", "-" %}
     {% assign is_sdl_page = false %}
     {% if page.path and page.path contains "SDL/" %}
       {% assign is_sdl_page = true %}
@@ -8,11 +7,12 @@
     {% assign homepage_url = "/" | absolute_url %}
     {% assign default_fr_url = "/SDL/" | absolute_url %}
     {% assign page_url = page.url | absolute_url %}
-    {% assign fr_url = default_fr_url %}
-    {% assign en_url = page_url %}
     {% if is_sdl_page %}
-      {% assign fr_url = page_url %}
       {% assign en_url = homepage_url %}
+      {% assign fr_url = page_url %}
+    {% else %}
+      {% assign en_url = page_url %}
+      {% assign fr_url = default_fr_url %}
     {% endif %}
 
     {% include gtm.html %}
