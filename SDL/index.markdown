@@ -11,7 +11,7 @@ seo:
   type: TechArticle
 locale: fr_FR
 published_time: 2003-09-01T00:00:00+02:00
-last_modified: 2026-02-17
+last_modified: 2026-02-16
 ---
 Il s'agit d'une série de cinq articles en français, traitant comme son nom l'indique de la librairie [SDL](https://www.libsdl.org).
 

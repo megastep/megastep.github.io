@@ -8,7 +8,7 @@ alt: Catloaf Software
 category: iOS Development
 description: As an early enthusiast with mobile development, I founded <a href="https://www.catloafsoft.com/">Catloaf Software</a> to market apps for Apple platforms.
 locale: en_US
-last_modified: 2026-02-17
+last_modified: 2026-02-16
 ---
 ### Mobile Applications
 
