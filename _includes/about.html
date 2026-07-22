@@ -1,26 +1,26 @@
- <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About Me</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 offset-lg-2">
-                    <p>Originally from Lyon, France, I am a software engineer based in Los Angeles. I hold a Masters Degree in Computer Science from the <a href="https://www.polytechnice.fr/en/informatique.html">University of Nice</a> and focus on shipping reliable, user-facing products.</p>
-		    <p>My recent work spans iOS and web applications, AI-powered educational apps, and long-term open-source maintenance.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>I am also an active musician and producer, and I am especially interested in where music, software, and design intersect.</p>
-		    <p>Check out my <a href="#portfolio">projects</a> for recent releases, then reach out via the <a href="#contact">contact section</a>.</p>
-                </div>
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <a href="/files/StephanePeter.pdf" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download My Resume
-                    </a>
-                </div>
-            </div>
+<section class="about section" id="about" aria-labelledby="about-title">
+  <div class="section__inner about__layout">
+    <div class="about__content reveal">
+      <h2 id="about-title">Software, sound, and everything between.</h2>
+      <div class="about__stories">
+        <div class="about__story">
+          <h3>Engineer</h3>
+          <p>Originally from Lyon and based in Los Angeles, I hold a Master's Degree in Computer Science from the University of Nice.</p>
+          <p>My recent work spans iOS, web, AI-powered educational apps, and long-term open-source maintenance.</p>
         </div>
-    </section>
+        <div class="about__story">
+          <h3>Musician</h3>
+          <p>I am an active musician and producer, interested in where sound, software, and design meet.</p>
+        </div>
+        <div class="about__story">
+          <h3>Entrepreneur</h3>
+          <p>I build and ship useful products, combining engineering experience with a practical product focus.</p>
+        </div>
+      </div>
+      <a class="button button--outline" href="/files/StephanePeter.pdf">Download résumé</a>
+    </div>
+    <div class="about__portrait reveal">
+      <img src="{{ site.imgprefix }}/img/profile.webp" alt="Stéphane Peter" width="302" height="302" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>

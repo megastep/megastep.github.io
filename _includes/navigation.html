@@ -1,0 +1,22 @@
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="site-nav__inner">
+    <a class="site-nav__brand" href="{% if page.layout == 'default' %}#page-top{% else %}/#page-top{% endif %}">{{ site.title }}</a>
+    <button class="site-nav__menu-button" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+    <div class="site-nav__menu" id="site-menu">
+      <a href="{% if page.layout == 'default' %}#portfolio{% else %}/#portfolio{% endif %}">Projects</a>
+      <a href="{% if page.layout == 'default' %}#about{% else %}/#about{% endif %}">About</a>
+      <a href="{% if page.layout == 'default' %}#contact{% else %}/#contact{% endif %}">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">
+        <span class="theme-toggle__icon" aria-hidden="true">
+          <svg class="theme-toggle__glyph theme-toggle__glyph--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="3.5"/>
+            <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6"/>
+          </svg>
+          <svg class="theme-toggle__glyph theme-toggle__glyph--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M20.6 15.3A8.8 8.8 0 0 1 8.7 3.4 8.8 8.8 0 1 0 20.6 15.3Z"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>

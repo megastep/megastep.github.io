@@ -1,8 +1,11 @@
 ---
 layout: article
+title: Open Source
 modal-id: 3
+featured-order: 2
 sitemap: false
 img: github.jpg
+cover: open-source-icon-v2.png
 img-url: https://github.com/megastep
 alt: Open Source on Github
 category: Open Source
