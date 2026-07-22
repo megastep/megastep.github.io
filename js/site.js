@@ -30,14 +30,24 @@
       toggle.addEventListener("click", function () {
         var nextTheme = effectiveTheme() === "dark" ? "light" : "dark";
         document.documentElement.dataset.theme = nextTheme;
-        localStorage.setItem("site-theme", nextTheme);
+        try {
+          window.localStorage.setItem("site-theme", nextTheme);
+        } catch (error) {
+          // Storage can be unavailable in private or restricted contexts.
+        }
         syncThemeToggle();
       });
     }
 
-    darkMode.addEventListener("change", function () {
+    function syncSystemTheme() {
       if (!document.documentElement.dataset.theme) syncThemeToggle();
-    });
+    }
+
+    if (typeof darkMode.addEventListener === "function") {
+      darkMode.addEventListener("change", syncSystemTheme);
+    } else if (typeof darkMode.addListener === "function") {
+      darkMode.addListener(syncSystemTheme);
+    }
   }
 
   function closeMenu() {

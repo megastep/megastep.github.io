@@ -85,9 +85,13 @@
 
     <script>
       (function () {
-        var saved = localStorage.getItem("site-theme");
-        if (saved === "light" || saved === "dark") {
-          document.documentElement.dataset.theme = saved;
+        try {
+          var saved = window.localStorage.getItem("site-theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.dataset.theme = saved;
+          }
+        } catch (error) {
+          // Storage can be unavailable in private or restricted contexts.
         }
       }());
     </script>
