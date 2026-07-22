@@ -8,6 +8,12 @@
   var lastDialogTrigger = null;
   var ignoreDialogClose = false;
 
+  function dialogReturnUrl() {
+    var state = window.history.state;
+    if (state && state.projectDialog && state.returnUrl) return state.returnUrl;
+    return window.location.pathname + window.location.search + "#portfolio";
+  }
+
   function effectiveTheme() {
     return document.documentElement.dataset.theme || (darkMode.matches ? "dark" : "light");
   }
@@ -151,7 +157,10 @@
         if (!dialog) return;
         event.preventDefault();
         lastDialogTrigger = trigger;
-        window.history.pushState({ projectDialog: dialog.id }, "", selector);
+        window.history.pushState({
+          projectDialog: dialog.id,
+          returnUrl: window.location.pathname + window.location.search + window.location.hash
+        }, "", selector);
         showDialog(dialog, trigger);
       });
     });
@@ -169,11 +178,7 @@
 
       dialog.addEventListener("close", function () {
         if (!ignoreDialogClose && window.location.hash === "#" + dialog.id) {
-          if (window.history.state && window.history.state.projectDialog === dialog.id) {
-            window.history.back();
-          } else {
-            window.history.replaceState(null, "", window.location.pathname + window.location.search + "#portfolio");
-          }
+          window.history.replaceState(null, "", dialogReturnUrl());
         }
 
         restoreDialogFocus();
