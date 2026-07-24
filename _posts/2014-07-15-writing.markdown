@@ -16,11 +16,6 @@ description: I have been blogging in various places over the years.<br/>I also w
 * I used to have a pretty active [LiveJournal](https://megastep.livejournal.com/).
 * [The Catloaf Software Blog](https://www.catloafsoft.com/blog/) has official news from my company.
 
-### Social Media
-
-* I have a fairly active [Facebook](https://www.facebook.com/megastep) profile.
-* I am `@megastep` on [X](https://x.com/megastep).
-
 ### Published Articles
 
 * [Overview of Linux Printing Systems](https://www.linuxjournal.com/article/6729), published in [Linux Journal](https://www.linuxjournal.com/) on July 3, 2003.
