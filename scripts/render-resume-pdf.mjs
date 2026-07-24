@@ -7,7 +7,7 @@ import { chromium } from "playwright";
 
 const root = resolve(import.meta.dirname, "..");
 const site = join(root, "_site");
-const output = resolve(root, process.env.RESUME_PDF_OUTPUT ?? "files/StephanePeter-web.pdf");
+const output = resolve(root, process.env.RESUME_PDF_OUTPUT ?? "files/StephanePeter.pdf");
 const mimeTypes = { ".css": "text/css", ".html": "text/html", ".js": "text/javascript", ".jpg": "image/jpeg", ".png": "image/png", ".svg": "image/svg+xml", ".webp": "image/webp", ".woff2": "font/woff2" };
 
 execFileSync("bundle", ["exec", "jekyll", "build", "--config", "_config.yml,_config_prod.yml"], { cwd: root, stdio: "inherit" });

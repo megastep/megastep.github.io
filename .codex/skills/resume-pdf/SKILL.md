@@ -1,6 +1,6 @@
 ---
 name: resume-pdf
-description: Build, update, and verify this repository's printable resume PDF. Use when changing the resume content or print layout, generating files/StephanePeter-web.pdf, diagnosing PDF pagination, or preparing the resume for PDF delivery.
+description: Build, update, and verify this repository's printable resume PDF. Use when changing the resume content or print layout, generating files/StephanePeter.pdf, diagnosing PDF pagination, or preparing the resume for PDF delivery.
 ---
 
 # Resume PDF
@@ -12,7 +12,7 @@ Use the repository's printable route and renderer; do not print the interactive 
 - Keep shared resume content in `_includes/resume_content.html` so `/resume/` and `/resume/print/` stay aligned.
 - Use `resume-print.html` for the print route and `_layouts/resume.html` for printable-page behavior.
 - Make print-only layout changes in the print rules in `_includes/css/main.css`.
-- Keep `files/StephanePeter-web.pdf` generated and ignored; do not commit it.
+- Generate and commit `files/StephanePeter.pdf`, the public download linked from `/resume/`.
 
 ## Build and inspect
 
@@ -28,19 +28,19 @@ Use the repository's printable route and renderer; do not print the interactive 
    pnpm run render:resume-pdf
    ```
 
-   The renderer builds Jekyll, serves `_site`, visits `/resume/print/`, and writes `files/StephanePeter-web.pdf`.
+   The renderer builds Jekyll, serves `_site`, visits `/resume/print/`, and writes `files/StephanePeter.pdf`.
 
 3. Confirm the artifact has Letter pages and a sensible page count:
 
    ```sh
-   pdfinfo files/StephanePeter-web.pdf
+   pdfinfo files/StephanePeter.pdf
    ```
 
 4. Rasterize and visually inspect every page after layout changes:
 
    ```sh
    mkdir -p /private/tmp/resume-pdf-pages
-   pdftoppm -png -r 144 files/StephanePeter-web.pdf /private/tmp/resume-pdf-pages/page
+   pdftoppm -png -r 144 files/StephanePeter.pdf /private/tmp/resume-pdf-pages/page
    ```
 
    Use the image-viewing tool on the generated PNGs. Check that the first page is populated, headings stay with their following content, no content is clipped, links are legible, and no interactive navigation or footer appears.

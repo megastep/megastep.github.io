@@ -33,7 +33,6 @@ exclude:
   - package.json
   - pnpm-lock.yaml
   - scripts
-  - files/StephanePeter-web.pdf
 
 # Footer settings
 footer:
