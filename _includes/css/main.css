@@ -1621,7 +1621,11 @@ button {
   }
 
   .resume__layout {
-    gap: 54px;
+    display: block;
+  }
+
+  .resume__aside {
+    margin-top: 42px;
   }
 
   .resume-section + .resume-section {
