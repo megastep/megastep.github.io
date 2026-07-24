@@ -7,7 +7,10 @@
         <li><a href="mailto:info@stephanepeter.com">info@stephanepeter.com</a></li>
         <li><a href="https://github.com/megastep">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/stephanepeter">LinkedIn</a></li>
-        {% unless page.printable %}<li><a href="/resume/print/">Printable version</a></li>{% endunless %}
+        {% unless page.printable %}
+          <li><a class="resume-hero__pdf" href="/files/StephanePeter.pdf" download><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Download PDF</a></li>
+          <li><a href="/resume/print/">Printable version</a></li>
+        {% endunless %}
       </ul>
     </div>
     <img class="resume-hero__portrait" src="/img/profile.webp" alt="Stéphane Peter" width="720" height="720" decoding="async">

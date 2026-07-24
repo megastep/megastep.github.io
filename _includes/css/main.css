@@ -1177,6 +1177,18 @@ button {
   color: var(--accent-strong);
 }
 
+.resume-hero__pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resume-hero__pdf svg {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+}
+
 .resume-hero__portrait {
   width: min(100%, 280px);
   justify-self: end;
