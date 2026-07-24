@@ -1142,6 +1142,7 @@ button {
   grid-template-columns: minmax(0, 1fr) minmax(180px, 280px);
   align-items: end;
   gap: clamp(42px, 8vw, 112px);
+  position: relative;
 }
 
 .resume-hero h1 {
@@ -1178,15 +1179,30 @@ button {
 }
 
 .resume-hero__pdf {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  color: var(--accent-strong);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .resume-hero__pdf svg {
-  width: 1em;
-  height: 1em;
+  width: 14px !important;
+  height: 14px !important;
   flex: 0 0 auto;
+}
+
+.resume-hero__pdf:hover {
+  text-decoration: underline;
 }
 
 .resume-hero__portrait {
