@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.locale | default: site.locale | replace: '_', '-' }}">
+  {% include head.html %}
+  <body id="page-top" class="resume-page">
+    {% include gtm_body.html %}
+    {% include navigation.html %}
+    <main class="resume">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include js.html %}
+  </body>
+</html>
