@@ -1035,6 +1035,14 @@ button {
   padding-top: 0;
 }
 
+.resume-page--print .resume__layout {
+  display: block;
+}
+
+.resume-page--print .resume__aside {
+  margin-top: 42px;
+}
+
 .resume-page--print .resume-hero {
   padding-top: 64px;
 }
@@ -1618,14 +1626,6 @@ button {
 
   .resume-hero h1 {
     font-size: 3.8rem;
-  }
-
-  .resume__layout {
-    display: block;
-  }
-
-  .resume__aside {
-    margin-top: 42px;
   }
 
   .resume-section + .resume-section {
