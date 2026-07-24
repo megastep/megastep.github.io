@@ -231,6 +231,22 @@
     }, { passive: true });
   }
 
+  function initSlackShare() {
+    document.querySelectorAll("[data-slack-share]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var message = link.getAttribute("data-slack-message");
+        if (!message || !navigator.clipboard || !window.isSecureContext) return;
+
+        event.preventDefault();
+        navigator.clipboard.writeText(message).then(function () {
+          window.open(link.href, "_blank", "noopener");
+        }, function () {
+          window.open(link.href, "_blank", "noopener");
+        });
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
     initNavigation();
@@ -238,5 +254,6 @@
     initReveals();
     initHero();
     initScrollSignals();
+    initSlackShare();
   });
 }());
