@@ -1887,6 +1887,11 @@ button {
     line-height: 1.42;
   }
 
+  .resume-role > p,
+  .resume-section > p {
+    font-size: 0.9rem;
+  }
+
   .resume-print-publication {
     display: block;
     break-inside: avoid;
