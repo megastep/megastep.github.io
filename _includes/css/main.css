@@ -1199,6 +1199,15 @@ button {
   text-transform: uppercase;
 }
 
+.resume-download::before {
+  content: "↓";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 1.1em;
+  line-height: 0.7;
+  vertical-align: -0.04em;
+}
+
 .resume-download:hover {
   background: var(--accent);
   color: var(--accent-contrast);
