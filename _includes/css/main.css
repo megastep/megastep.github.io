@@ -1211,7 +1211,10 @@ button {
 }
 
 .resume-forward summary {
-  display: block;
+  width: 32px;
+  padding: 7px;
+  display: grid;
+  place-items: center;
   cursor: pointer;
   list-style: none;
 }
@@ -1227,6 +1230,16 @@ button {
   font-size: 1.1em;
   line-height: 0.7;
   vertical-align: -0.04em;
+}
+
+.resume-forward summary svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .resume-download:hover {
@@ -1262,9 +1275,23 @@ button {
   padding: 9px 10px;
   border-radius: 6px;
   color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 0.74rem;
   text-decoration: none;
+}
+
+.resume-forward__menu svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
 }
 
 .resume-forward__menu a:hover {
