@@ -1628,9 +1628,13 @@ button {
     margin-top: 42px;
   }
 
-  .resume-role,
-  .resume-section {
+  .resume-role {
     break-inside: avoid;
+  }
+
+  .resume-section h2,
+  .resume-role__heading {
+    break-after: avoid;
   }
 }
 
