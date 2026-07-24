@@ -29,6 +29,11 @@ exclude:
   - AGENTS.md
   - LICENCE
   - CNAME
+  - node_modules
+  - package.json
+  - package-lock.json
+  - scripts
+  - files/StephanePeter-web.pdf
 
 # Footer settings
 footer:
