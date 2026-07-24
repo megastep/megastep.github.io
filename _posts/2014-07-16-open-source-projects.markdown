@@ -15,7 +15,6 @@ Some of the projects I currently maintain include:
 
 * [Makeself](https://github.com/megastep/makeself), a widely used Unix packaging tool for creating self-extracting archives and installers.
 * [Loki Setup](https://github.com/megastep/loki_setup), the Loki Games installer for Linux and UNIX.
-* [bin2c](https://github.com/megastep/bin2c), a small tool for converting binary files into C arrays for easy inclusion in source code.
 * [translateR](https://github.com/megastep/translateR), an AI-powered App Store Connect localization tool that supports more than 38 languages.
 * [Codex Skills](https://github.com/megastep/codex-skills), a curated collection of agent skills converted for use with Codex.
 
