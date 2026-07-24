@@ -31,7 +31,7 @@ exclude:
   - CNAME
   - node_modules
   - package.json
-  - package-lock.json
+  - pnpm-lock.yaml
   - scripts
   - files/StephanePeter-web.pdf
 
