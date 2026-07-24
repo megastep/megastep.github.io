@@ -1,3 +1,7 @@
+{% unless page.printable %}
+  <a class="resume-download" href="/files/StephanePeter.pdf" download>Download as PDF</a>
+{% endunless %}
+
 <header class="resume-hero">
   <div class="resume__inner resume-hero__inner">
     <div class="resume-hero__copy">
@@ -14,9 +18,6 @@
     </div>
     <img class="resume-hero__portrait" src="/img/profile.webp" alt="Stéphane Peter" width="720" height="720" decoding="async">
   </div>
-  {% unless page.printable %}
-    <div class="resume__inner resume-hero__utility"><a class="resume-hero__pdf" href="/files/StephanePeter.pdf" download><span class="resume-hero__pdf-icon" aria-hidden="true">↓</span><span>Download PDF</span></a></div>
-  {% endunless %}
 </header>
 
 <div class="section-separator" aria-hidden="true"><span></span></div>
