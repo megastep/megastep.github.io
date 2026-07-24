@@ -1032,7 +1032,7 @@ button {
 }
 
 .resume-page--print .resume {
-  padding-top: 0;
+  padding: 0;
 }
 
 .resume-page--print .resume__layout {
@@ -1040,11 +1040,79 @@ button {
 }
 
 .resume-page--print .resume__aside {
-  margin-top: 42px;
+  margin-top: 30px;
 }
 
 .resume-page--print .resume-hero {
-  padding-top: 64px;
+  padding: 42px 0 28px;
+}
+
+.resume-page--print .resume .section-separator {
+  margin-bottom: 48px;
+}
+
+.resume-page--print .resume-section + .resume-section {
+  margin-top: 44px;
+}
+
+.resume-page--print .resume-section h2 {
+  margin-bottom: 16px;
+  padding-bottom: 11px;
+}
+
+.resume-page--print .resume-role {
+  padding-bottom: 20px;
+}
+
+.resume-page--print .resume-role + .resume-role {
+  padding-top: 20px;
+}
+
+.resume-page--print .resume-role h3,
+.resume-page--print .resume-education h3 {
+  font-size: 1.16rem;
+}
+
+.resume-page--print .resume-role__heading p,
+.resume-page--print .resume-education p,
+.resume-page--print .resume-languages,
+.resume-page--print .resume-meta {
+  font-size: 0.74rem;
+}
+
+.resume-page--print .resume-role ul {
+  margin-top: 12px;
+}
+
+.resume-page--print .resume-role li,
+.resume-page--print .resume-role--compact > p,
+.resume-page--print .resume-section > p {
+  line-height: 1.48;
+}
+
+.resume-page--print .resume-role li + li {
+  margin-top: 4px;
+}
+
+.resume-page--print .resume-role--compact > p {
+  margin-top: 10px;
+}
+
+.resume-page--print .resume-facts div {
+  padding: 11px 0;
+}
+
+.resume-page--print .resume-facts dt {
+  margin-bottom: 4px;
+}
+
+.resume-page--print .resume-facts dd {
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
+.resume-page--print .resume-education + .resume-education {
+  margin-top: 20px;
 }
 
 .resume__inner {
@@ -1612,7 +1680,7 @@ button {
   }
 
   .resume-hero {
-    padding: 36px 0 28px;
+    padding: 28px 0 22px;
   }
 
   .resume-hero__inner {
@@ -1625,11 +1693,11 @@ button {
   }
 
   .resume-hero h1 {
-    font-size: 3.8rem;
+    font-size: 3.25rem;
   }
 
   .resume-section + .resume-section {
-    margin-top: 42px;
+    margin-top: 32px;
   }
 
   .resume-role {
