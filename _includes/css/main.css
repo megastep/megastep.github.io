@@ -1211,9 +1211,9 @@ button {
 }
 
 .resume-forward summary {
-  width: 38px;
-  min-height: 38px;
-  height: 38px;
+  width: 32px;
+  min-height: 32px;
+  height: 32px;
   padding: 0;
   display: grid;
   place-items: center;
