@@ -85,6 +85,10 @@
 
     <script>
       (function () {
+        {% if page.printable %}
+        document.documentElement.dataset.theme = "light";
+        return;
+        {% endif %}
         try {
           var saved = window.localStorage.getItem("site-theme");
           if (saved === "light" || saved === "dark") {

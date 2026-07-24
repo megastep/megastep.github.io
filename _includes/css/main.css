@@ -1015,6 +1015,30 @@ button {
   padding: var(--nav-height) 0 120px;
 }
 
+.resume-page--print {
+  color-scheme: light;
+  --page: #ffffff;
+  --page-rgb: 255, 255, 255;
+  --surface: #ffffff;
+  --surface-soft: #e9eef0;
+  --media-surface: #e9eef0;
+  --ink: #172025;
+  --muted: #526168;
+  --line: #ced8dc;
+  --accent: #168f87;
+  --accent-strong: #08756f;
+  --accent-contrast: #ffffff;
+  --shadow: rgba(21, 41, 47, 0.14);
+}
+
+.resume-page--print .resume {
+  padding-top: 0;
+}
+
+.resume-page--print .resume-hero {
+  padding-top: 64px;
+}
+
 .resume__inner {
   width: min(1120px, calc(100vw - 64px));
   margin: 0 auto;
@@ -1556,6 +1580,16 @@ button {
 }
 
 @media print {
+  @page {
+    size: letter;
+    margin: 0.35in;
+  }
+
+  html,
+  body.resume-page--print {
+    background: #ffffff;
+  }
+
   .site-nav,
   .site-footer {
     display: none;

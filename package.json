@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "render:resume-pdf": "node scripts/render-resume-pdf.mjs",
+    "setup:resume-pdf": "playwright install chromium"
+  },
+  "devDependencies": {
+    "playwright": "^1.57.0"
+  }
+}

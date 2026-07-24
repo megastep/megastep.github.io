@@ -1,4 +1,6 @@
 _site
+node_modules/
+files/StephanePeter-web.pdf
 .jekyll-cache
 seo/
 vendor/
