@@ -1123,6 +1123,11 @@ button {
   letter-spacing: -0.035em;
 }
 
+.resume-role__heading h3 {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
 .resume-role__heading p,
 .resume-education p,
 .resume-role--compact > p,
@@ -1132,9 +1137,11 @@ button {
 
 .resume-role__heading p {
   margin: 0;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: 0.8rem;
+  text-align: right;
 }
 
 .resume-role__heading span {
