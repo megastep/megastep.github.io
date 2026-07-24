@@ -1211,8 +1211,10 @@ button {
 }
 
 .resume-forward summary {
-  width: 32px;
-  padding: 7px;
+  width: 38px;
+  min-height: 38px;
+  height: 38px;
+  padding: 0;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1233,8 +1235,8 @@ button {
 }
 
 .resume-forward summary svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -1314,7 +1316,7 @@ button {
   bottom: auto;
   left: auto;
   height: 0;
-  margin-bottom: clamp(88px, 10vw, 144px);
+  margin-bottom: clamp(64px, 8vw, 112px);
 }
 
 .resume__layout {
@@ -1778,7 +1780,7 @@ button {
   }
 
   .resume .section-separator {
-    margin-bottom: 92px;
+    margin-bottom: 64px;
   }
 
   .resume__layout {
