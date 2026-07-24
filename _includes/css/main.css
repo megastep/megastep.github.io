@@ -1233,8 +1233,8 @@ button {
 }
 
 .resume-forward summary svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
