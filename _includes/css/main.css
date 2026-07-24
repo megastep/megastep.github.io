@@ -1099,12 +1099,13 @@ button {
   .site-nav__menu {
     position: absolute;
     top: calc(100% + 1px);
-    left: 0;
-    right: 0;
+    right: 16px;
+    width: min(272px, calc(100vw - 32px));
     padding: 28px 16px 34px;
     display: grid;
     gap: 8px;
     border-bottom: 1px solid var(--line);
+    border-radius: 0 0 18px 18px;
     background: var(--surface);
     box-shadow: 0 28px 50px var(--shadow);
     opacity: 0;
