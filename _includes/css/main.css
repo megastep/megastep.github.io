@@ -1309,7 +1309,7 @@ button {
 }
 
 .resume .section-separator {
-  margin-bottom: clamp(72px, 9vw, 124px);
+  margin-bottom: clamp(88px, 10vw, 144px);
 }
 
 .resume__layout {
@@ -1773,7 +1773,7 @@ button {
   }
 
   .resume .section-separator {
-    margin-bottom: 68px;
+    margin-bottom: 92px;
   }
 
   .resume__layout {
