@@ -1100,7 +1100,7 @@ button {
     position: absolute;
     top: calc(100% + 1px);
     right: 16px;
-    width: min(200px, calc(100vw - 32px));
+    width: min(150px, calc(100vw - 32px));
     padding: 28px 16px 34px;
     display: grid;
     gap: 8px;
