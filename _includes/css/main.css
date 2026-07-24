@@ -1044,7 +1044,19 @@ button {
 }
 
 .resume-page--print .resume-hero {
-  padding: 42px 0 28px;
+  padding: 30px 0 22px;
+}
+
+.resume-page--print .resume-hero__inner {
+  gap: 36px;
+}
+
+.resume-page--print .resume-hero__portrait {
+  width: 180px;
+}
+
+.resume-page--print .resume-hero h1 {
+  font-size: clamp(3.2rem, 6vw, 4.75rem);
 }
 
 .resume-page--print .resume .section-separator {
@@ -1680,24 +1692,51 @@ button {
   }
 
   .resume-hero {
-    padding: 28px 0 22px;
+    padding: 16px 0 16px;
   }
 
   .resume-hero__inner {
-    grid-template-columns: 1fr 130px;
-    gap: 40px;
+    grid-template-columns: 1fr 100px;
+    gap: 28px;
   }
 
   .resume-hero__portrait {
-    width: 130px;
+    width: 100px;
   }
 
   .resume-hero h1 {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
+  }
+
+  .resume .section-separator {
+    margin-bottom: 28px;
+  }
+
+  .resume__layout {
+    columns: 2;
+    column-gap: 32px;
+  }
+
+  .resume__primary,
+  .resume__aside {
+    display: contents;
+  }
+
+  .resume-section {
+    break-inside: avoid;
   }
 
   .resume-section + .resume-section {
-    margin-top: 32px;
+    margin-top: 28px;
+  }
+
+  .resume__aside .resume-section + .resume-section {
+    margin-top: 12px;
+  }
+
+  .resume__aside .resume-section h2 {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
   }
 
   .resume-role {

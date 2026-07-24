@@ -47,7 +47,7 @@ Use the repository's printable route and renderer; do not print the interactive 
 
 ## Pagination changes
 
-- Use a single, full-width `.resume__layout` in print media. A paginated two-column grid strands empty sidebar space on later pages.
+- Use a flowing two-column layout in print media: let the primary and aside wrappers use `display: contents` so sections continue into the next available column instead of reserving a fixed sidebar.
 - Preserve `break-inside: avoid` for individual `.resume-role` entries.
 - Do not apply `break-inside: avoid` to an entire `.resume-section`; long sections can force a mostly blank preceding page.
 - Keep section headings and role headings with their following content using `break-after: avoid`.
