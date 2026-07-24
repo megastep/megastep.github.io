@@ -1,8 +1,10 @@
 ---
 layout: article
 modal-id: 6
+featured-order: 6
 sitemap: false
 img: video.jpg
+cover: video-icon-v2.png
 img-url: https://www.youtube.com/user/megastep
 alt: Video
 category: Video

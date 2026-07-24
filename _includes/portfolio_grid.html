@@ -1,27 +1,25 @@
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Projects</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                {% for post in site.posts %}
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#modal-{{ post.modal-id }}" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#modal-{{ post.modal-id }}">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-				    <p>{{ post.title }}</p>
-                                </div>
-                            </div>
-                            <img src="{{ site.imgprefix }}/img/portfolio/{{ post.img }}" class="img-fluid" alt="{{ post.alt }}" width="900" height="650" loading="lazy" decoding="async">
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+<section class="projects section" id="portfolio" aria-labelledby="projects-title">
+  <div class="section__inner">
+    <div class="section-heading reveal">
+      <h2 id="projects-title">Projects</h2>
+      <p>My work across software, open source, Linux, music, writing, and video.</p>
+    </div>
+    {% assign featured_posts = site.posts | sort: "featured-order" %}
+    <div class="project-grid">
+      {% for post in featured_posts %}
+      <article class="project project--{{ forloop.index }} reveal">
+        <a class="project__link" href="#modal-{{ post.modal-id }}" data-project-open aria-haspopup="dialog">
+          <div class="project__image-wrap">
+            <img src="{{ site.imgprefix }}/img/portfolio/{{ post.cover | default: post.img | replace: '.jpg', '.webp' }}" alt="{{ post.alt }}" width="900" height="650" loading="lazy" decoding="async">
+          </div>
+          <h3>{{ post.title }}</h3>
+          {% if forloop.index == 1 %}
+          <p>{{ post.category }}</p>
+          {% endif %}
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="section-separator signal" aria-hidden="true"><span></span></div>
+</section>

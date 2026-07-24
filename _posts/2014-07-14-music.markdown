@@ -1,8 +1,10 @@
 ---
 layout: article
 modal-id: 5
+featured-order: 5
 sitemap: false
 img: music.jpg
+cover: music-icon-v2.png
 alt: Music
 category: Music
 description: Music is a lifelong passion of mine.<br/>I learned to play keyboards as a kid, then later taught myself guitar, bass and drums.

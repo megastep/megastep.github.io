@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.locale | default: site.locale | replace: '_', '-' }}">
+  {% include head.html %}
+  <body id="page-top" class="resume-page{% if page.printable %} resume-page--print{% endif %}">
+    {% unless page.printable %}
+      {% include gtm_body.html %}
+      {% include navigation.html %}
+    {% endunless %}
+    <main class="resume">
+      {{ content }}
+    </main>
+    {% unless page.printable %}
+      {% include footer.html %}
+      {% include js.html %}
+    {% endunless %}
+  </body>
+</html>

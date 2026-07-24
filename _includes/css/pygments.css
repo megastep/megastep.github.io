@@ -54,3 +54,111 @@
 .vg { color: #000000 } /* Name.Variable.Global */
 .vi { color: #000000 } /* Name.Variable.Instance */
 .il { color: #1C01CE } /* Literal.Number.Integer.Long */
+
+/* Keep highlighted source legible on both site themes. */
+.highlight { color: var(--ink); }
+.highlight .err,
+.highlight .n,
+.highlight .o,
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .ne,
+.highlight .nf,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx,
+.highlight .py,
+.highlight .nt,
+.highlight .nv,
+.highlight .ow,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi { color: var(--ink); }
+
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .cs { color: var(--muted); }
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .nb,
+.highlight .bp { color: var(--accent-strong); }
+
+.highlight .l,
+.highlight .ld,
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il { color: #355ea9; }
+
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss { color: #af3e37; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .highlight .l,
+  :root:not([data-theme="light"]) .highlight .ld,
+  :root:not([data-theme="light"]) .highlight .m,
+  :root:not([data-theme="light"]) .highlight .mb,
+  :root:not([data-theme="light"]) .highlight .mf,
+  :root:not([data-theme="light"]) .highlight .mh,
+  :root:not([data-theme="light"]) .highlight .mi,
+  :root:not([data-theme="light"]) .highlight .mo,
+  :root:not([data-theme="light"]) .highlight .il { color: #a9c0ff; }
+
+  :root:not([data-theme="light"]) .highlight .s,
+  :root:not([data-theme="light"]) .highlight .sb,
+  :root:not([data-theme="light"]) .highlight .sc,
+  :root:not([data-theme="light"]) .highlight .sd,
+  :root:not([data-theme="light"]) .highlight .s2,
+  :root:not([data-theme="light"]) .highlight .se,
+  :root:not([data-theme="light"]) .highlight .sh,
+  :root:not([data-theme="light"]) .highlight .si,
+  :root:not([data-theme="light"]) .highlight .sx,
+  :root:not([data-theme="light"]) .highlight .sr,
+  :root:not([data-theme="light"]) .highlight .s1,
+  :root:not([data-theme="light"]) .highlight .ss { color: #ff9b92; }
+}
+
+:root[data-theme="dark"] .highlight .l,
+:root[data-theme="dark"] .highlight .ld,
+:root[data-theme="dark"] .highlight .m,
+:root[data-theme="dark"] .highlight .mb,
+:root[data-theme="dark"] .highlight .mf,
+:root[data-theme="dark"] .highlight .mh,
+:root[data-theme="dark"] .highlight .mi,
+:root[data-theme="dark"] .highlight .mo,
+:root[data-theme="dark"] .highlight .il { color: #a9c0ff; }
+
+:root[data-theme="dark"] .highlight .s,
+:root[data-theme="dark"] .highlight .sb,
+:root[data-theme="dark"] .highlight .sc,
+:root[data-theme="dark"] .highlight .sd,
+:root[data-theme="dark"] .highlight .s2,
+:root[data-theme="dark"] .highlight .se,
+:root[data-theme="dark"] .highlight .sh,
+:root[data-theme="dark"] .highlight .si,
+:root[data-theme="dark"] .highlight .sx,
+:root[data-theme="dark"] .highlight .sr,
+:root[data-theme="dark"] .highlight .s1,
+:root[data-theme="dark"] .highlight .ss { color: #ff9b92; }

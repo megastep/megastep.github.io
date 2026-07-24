@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume PDF"
+  short_description: "Build and verify the printable resume PDF"
+  default_prompt: "Use $resume-pdf to build and inspect the printable resume PDF."

@@ -1,6 +1,6 @@
 # Site settings
 title: Stéphane Peter
-email: megastep@megastep.org
+email: info@stephanepeter.com
 url: https://stephanepeter.com
 description: "Stéphane Peter: Software Engineer, Musician, Entrepreneur."
 locale: en_US
@@ -17,9 +17,6 @@ logo: /img/profile.png
 image: /img/banner.jpg
 imgprefix: ""
 
-# Contact form: comment the line below if you want to stick with the default PHP contact form
-contact: static
-
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary: 18bc9c #80B3FF
@@ -32,13 +29,14 @@ exclude:
   - AGENTS.md
   - LICENCE
   - CNAME
+  - node_modules
+  - package.json
+  - pnpm-lock.yaml
+  - scripts
 
 # Footer settings
 footer:
   copyright: Stéphane Peter
-  location: Snail Mail
-  social: Around the Web
-  credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -48,16 +46,21 @@ social:
     url: https://facebook.com/megastep
   - title: bluesky
     url: https://bsky.app/profile/stephanepeter.com
+    featured: true
   - title: linkedin
     url: https://www.linkedin.com/in/stephanepeter
+    featured: true
   - title: mastodon
     url: https://me.dm/@megastep
+    featured: true
   - title: github
     url: https://github.com/megastep
+    featured: true
   - title: stack-overflow
     url: https://stackoverflow.com/users/115287/megastep
   - title: youtube
     url: https://www.youtube.com/user/megastep
+    featured: true
   - title: vimeo-square
     url: https://vimeo.com/megastep
   - title: soundcloud
@@ -66,15 +69,13 @@ social:
     url: https://www.last.fm/user/megascargot
   - title: instagram
     url: https://instagram.com/megastep/
+    featured: true
   - title: tumblr
     url: https://megastep.tumblr.com/
   - title: medium
     url: https://angryfrenchman.org/
 
 googletag: GTM-NTV73Q3
-
-# Credits content
-credits: 'Site based on the Freelancer Bootstrap theme created by <a href="https://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
@@ -84,3 +85,10 @@ highlighter: rouge
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-minifier
+
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  exclude:
+    - feed.xml

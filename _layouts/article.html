@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ page.locale | default: site.locale | replace: '_', '-' }}" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     {% include head.html %}
-    <body id="page-top" class="index">
+    <body id="page-top" class="article-page">
     {% include gtm_body.html %}
     {% include nav_article.html %}
     {% include header_article.html %}
-    <div class="container">
-        <div class="row">
-           <div class="col-lg-10 offset-lg-1 article" lang="{{ page.locale | default: site.locale | replace: '_', '-' }}">
-    		{{ content }}
-	   </div>
-	</div>
-    </div>
+    <main class="article-shell">
+      <article class="article-content" lang="{{ page.locale | default: site.locale | replace: '_', '-' }}">
+        {{ content }}
+      </article>
+    </main>
     {% include footer.html %}
     {% include js.html %}
     </body>

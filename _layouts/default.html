@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.locale | default: site.locale | replace: '_', '-' }}" prefix="og: http://ogp.me/ns#">
     {% include head.html %}
-    <body id="page-top" class="index">
+    <body id="page-top" class="home-page">
     {% include gtm_body.html %}
     {% include nav.html %}
+    <main>
     {% include header.html %}
     {% include portfolio_grid.html %}
     {% include about.html %}
 
-    {% if site.contact == "static" %}
     {% include contact_static.html %}
-    {% else %}
-    {% include contact.html %}
-    {% endif %}
+    </main>
 
     {% include footer.html %}
     {% include modals.html %}

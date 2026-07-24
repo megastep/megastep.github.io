@@ -1,36 +1,27 @@
 ---
 layout: article
+title: Catloaf Software, Inc.
 modal-id: 1
+featured-order: 1
 sitemap: false
 img: catloaf.jpg
+cover: catloaf-logo.png
 img-url: https://www.catloafsoft.com/
-alt: Catloaf Software
-category: iOS Development
-description: As an early enthusiast with mobile development, I founded <a href="https://www.catloafsoft.com/">Catloaf Software</a> to market apps for Apple platforms.
+alt: Catloaf Software products
+category: Independent product studio
+description: <a href="https://www.catloafsoft.com/">Catloaf Software, Inc.</a> is my independent product studio, building and maintaining mobile, web, and AI-powered products.
 locale: en_US
-last_modified: 2026-02-16
+last_modified: 2026-07-23
 ---
-### Mobile Applications
+Catloaf Software, Inc. is the company behind my product work. Founded in 2010, it has grown from an Apple-focused app business into an independent studio that ships and maintains products across iOS, Android, and the web.
 
-* [Fretuoso](https://fretuoso.app/) is an educational game for learning the fretboard of the guitar, bass and other stringed instruments.
-* [Text With](https://textwith.me) is a series of educational AI chatbot apps, allowing the user to have deep conversations with historical figures (in [Text With History](https://textwith.me/history/)), popular authors (in [Text With Authors](https://textwith.me/authors/)) and Biblical characters (in [Text With Jesus](https://textwith.me/jesus/)). The apps are powered by the *ChatGPT* engine from OpenAI, and are available for free on the Apple App Store, [Google Play Store](https://play.google.com/store/apps/dev?id=8182293785712256064) and as a [Web app](https://textwith.app/).
-* In 2026, I continue to expand the Text With platform with new conversational experiences, improved safety tooling, and higher-quality responses across mobile and web.
-* [Texts From](https://texts.fr), a series of simple apps used to get daily quotes from [Jesus](https://jesus.texts.fr), [Oscar Wilde](https://wilde.texts.fr), [Donald Trump](https://trump.texts.fr), [Bernie Sanders](https://bernie.texts.fr),  or the [Founding Fathers of the United States](https://fathers.texts.fr).
-* [Play Him Off, Keyboard Cat!](https://iphonekeyboardcat.com/), my first iOS app, was essentially a convenient archive of [Keyboard Cat](https://knowyourmeme.com/memes/keyboard-cat) mashup videos, a YouTube meme that became very popular around 2009. It is no longer being maintained.
+### Products in market
 
-<p align="center">
-  <a href="https://apps.apple.com/developer/catloaf-software-llc/id316792340">
-    <img src="{{ site.imgprefix }}/img/appstore-badge.png" alt="Catloaf Software Apps" />
-  </a>
-</p>
+* [Text With](https://textwith.me/) brings conversational educational experiences to faith, history, and literature across mobile, web, and voice surfaces.
+* [Teachee](https://teachee.org/) is a virtual teacher that assigns homework.
+* [Fretuoso](https://fretuoso.app/) helps musicians learn the fretboard for guitar, bass, ukulele, banjo, and mandolin.
+* [Texts From](https://texts.fr/) is a long-running family of daily-quote apps available across Apple and Android platforms.
 
-### Java Mobile Applications (J2ME)
+### Product and engineering work
 
-* [Guitar Trainer](https://www.mobiletutor.org/guitar) was originally written for older mobile phones (including *Blackberry*), as a J2ME app that could be purchased directly from my [MobileTutor.org](https://www.mobiletutor.org) website. The last version is now free to download.
-* Before the advent of online marketplaces such as the App Store and Google Play, the [MobileTutor.org](https://www.mobiletutor.org) store backend was entirely designed from scratch, with payment processing through PayPal, Amazon, Google Checkout and a number of other mobile payment processors.
-
-### Other Catloaf Businesses
-
-* [Catloaf Productions](https://catloafprod.com) is dedicated to website design, video production and online artist management.
-* [Catloaf Art](https://catloaf.art) is an online outlet where you can purchase my wife's paintings.
-* [Catloaf ASMR](https://catloafasmr.com) is a small side project, producing ASMR videos on YouTube for relaxation.
+The studio combines product planning with hands-on delivery: native apps, web apps, backend systems, AI integrations, analytics, subscriptions, store delivery, and post-launch iteration. The work also includes performance, reliability, UX polish, and release operations for products that need to keep improving after launch.
