@@ -1178,11 +1178,18 @@ button {
   color: var(--accent-strong);
 }
 
-.resume-download {
+.resume-actions {
   position: fixed;
   z-index: 20;
   top: calc(var(--nav-height) + 14px);
   right: max(16px, calc((100vw - 1120px) / 2));
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.resume-download,
+.resume-forward summary {
   min-height: 32px;
   padding: 8px 13px;
   border: 1px solid var(--accent);
@@ -1199,6 +1206,20 @@ button {
   text-transform: uppercase;
 }
 
+.resume-forward {
+  position: relative;
+}
+
+.resume-forward summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.resume-forward summary::-webkit-details-marker {
+  display: none;
+}
+
 .resume-download::before {
   content: "↓";
   display: inline-block;
@@ -1212,6 +1233,43 @@ button {
   background: var(--accent);
   color: var(--accent-contrast);
   text-decoration: underline;
+}
+
+.resume-forward summary:hover,
+.resume-forward[open] summary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.resume-forward__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 148px;
+  padding: 6px;
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 14px 30px var(--shadow);
+}
+
+.resume-forward:not([open]) .resume-forward__menu {
+  display: none;
+}
+
+.resume-forward__menu a {
+  padding: 9px 10px;
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-decoration: none;
+}
+
+.resume-forward__menu a:hover {
+  background: var(--surface-soft);
+  color: var(--accent-strong);
 }
 
 .resume-hero__portrait {
