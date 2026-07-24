@@ -1309,6 +1309,11 @@ button {
 }
 
 .resume .section-separator {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  height: 0;
   margin-bottom: clamp(88px, 10vw, 144px);
 }
 
