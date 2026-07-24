@@ -1104,6 +1104,7 @@ button {
     padding: 28px 16px 34px;
     display: grid;
     gap: 8px;
+    justify-items: end;
     border-bottom: 1px solid var(--line);
     border-radius: 0 0 18px 18px;
     background: var(--surface);
@@ -1124,11 +1125,14 @@ button {
   }
 
   .site-nav__menu > a {
+    width: 100%;
     min-height: 48px;
     padding: 10px 12px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     font-size: 1rem;
+    text-align: right;
   }
 
   .site-nav__menu > a::after {
