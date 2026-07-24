@@ -1135,6 +1135,7 @@ button {
 .resume-hero {
   padding: clamp(72px, 10vw, 144px) 0 clamp(54px, 7vw, 92px);
   border-bottom: 1px solid var(--line);
+  position: relative;
 }
 
 .resume-hero__inner {
@@ -1142,7 +1143,6 @@ button {
   grid-template-columns: minmax(0, 1fr) minmax(180px, 280px);
   align-items: end;
   gap: clamp(42px, 8vw, 112px);
-  position: relative;
 }
 
 .resume-hero h1 {
@@ -1179,9 +1179,6 @@ button {
 }
 
 .resume-hero__pdf {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -1200,10 +1197,26 @@ button {
   text-transform: uppercase;
 }
 
-.resume-hero__pdf svg {
-  width: 14px !important;
-  height: 14px !important;
-  flex: 0 0 auto;
+.resume-hero__utility {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.resume-hero__pdf {
+  pointer-events: auto;
+}
+
+.resume-hero__pdf-icon {
+  display: inline-block;
+  width: 0.9em;
+  font-size: 1.1em;
+  line-height: 0.7;
+  text-align: center;
 }
 
 .resume-hero__pdf:hover {
