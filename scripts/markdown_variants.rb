@@ -48,7 +48,10 @@ module MarkdownVariants
   end
 
   def extract_content(document)
-    nodes = document.css("main, dialog.project-dialog")
+    nodes = document.xpath(
+      "//main | //dialog[contains(concat(' ', normalize-space(@class), ' '), ' project-dialog ')]"
+    )
+    nodes = [document.at_xpath("//body")].compact if nodes.empty?
     return "" if nodes.empty?
 
     markdown = nodes.filter_map do |node|
