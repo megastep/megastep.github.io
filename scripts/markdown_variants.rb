@@ -35,9 +35,9 @@ module MarkdownVariants
       puts "Found #{html_paths.length} rendered HTML pages (#{rendered_bytes} bytes) in #{destination}"
     end
 
-    html_paths.each do |html_path|
+    html_paths.each_with_index do |html_path, index|
       document = Nokogiri::HTML.parse(html_path.read)
-      content = extract_content(document)
+      content = extract_content(document, report: report && index.zero?)
       next if content.empty?
 
       relative_path = html_path.relative_path_from(destination).sub_ext(".md")
@@ -50,13 +50,14 @@ module MarkdownVariants
     generated_count
   end
 
-  def extract_content(document)
+  def extract_content(document, report: false)
     nodes = document.xpath(
       "//*[local-name()='main'] | " \
       "//*[local-name()='dialog' and " \
       "contains(concat(' ', normalize-space(@class), ' '), ' project-dialog ')]"
     )
     nodes = [document.at_xpath("//*[local-name()='body']")].compact if nodes.empty?
+    puts "Selected #{nodes.length} content nodes from #{document.root&.name || 'no root'}" if report
     return "" if nodes.empty?
 
     markdown = nodes.filter_map do |node|
@@ -67,6 +68,7 @@ module MarkdownVariants
         github_flavored: true,
         unknown_tags: :bypass
       ).strip
+      puts "Converted #{copy.to_html.bytesize} HTML bytes to #{converted.bytesize} Markdown bytes" if report
       converted unless converted.empty?
     end.join("\n\n")
 
