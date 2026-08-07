@@ -51,18 +51,18 @@ module MarkdownVariants
     nodes = document.css("main, dialog.project-dialog")
     return "" if nodes.empty?
 
-    fragment = Nokogiri::HTML::DocumentFragment.parse("")
-    nodes.each do |node|
+    markdown = nodes.filter_map do |node|
       copy = node.dup
       copy.css(REMOVED_CONTENT).remove
-      fragment.add_child(copy)
-    end
+      converted = ReverseMarkdown.convert(
+        copy.to_html,
+        github_flavored: true,
+        unknown_tags: :bypass
+      ).strip
+      converted unless converted.empty?
+    end.join("\n\n")
 
-    ReverseMarkdown.convert(
-      fragment.to_html,
-      github_flavored: true,
-      unknown_tags: :bypass
-    ).strip.gsub(/\n{3,}/, "\n\n")
+    markdown.gsub(/[ \t]+(?=\n|\z)/, "").gsub(/\n{3,}/, "\n\n")
   end
 
   def render(document, content)
