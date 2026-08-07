@@ -36,7 +36,7 @@ module MarkdownVariants
     end
 
     html_paths.each_with_index do |html_path, index|
-      document = Nokogiri::HTML.parse(html_path.read)
+      document = Nokogiri::HTML5.parse(html_path.read)
       content = extract_content(document, report: report && index.zero?)
       next if content.empty?
 
