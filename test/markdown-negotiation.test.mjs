@@ -9,7 +9,11 @@ import {
 
 test("detects an acceptable Markdown media range", () => {
   assert.equal(acceptsMarkdown("text/markdown"), true);
-  assert.equal(acceptsMarkdown("text/html, text/markdown; q=0.8"), true);
+  assert.equal(acceptsMarkdown("text/html, text/markdown; q=0.8"), false);
+  assert.equal(acceptsMarkdown("text/html;q=1, text/markdown;q=0.1"), false);
+  assert.equal(acceptsMarkdown("text/html;q=0.5, text/markdown;q=0.8"), true);
+  assert.equal(acceptsMarkdown("text/markdown, */*"), true);
+  assert.equal(acceptsMarkdown("*/*"), false);
   assert.equal(acceptsMarkdown("text/markdown;q=0"), false);
   assert.equal(acceptsMarkdown("text/html"), false);
 });
@@ -19,20 +23,29 @@ test("maps public page paths to generated Markdown assets", () => {
   assert.equal(markdownAssetPath("/resume/"), "/__markdown/resume/index.md");
   assert.equal(markdownAssetPath("/resume"), "/__markdown/resume/index.md");
   assert.equal(markdownAssetPath("/resume/index.html"), "/__markdown/resume/index.md");
+  assert.equal(markdownAssetPath("/../resume/"), null);
+  assert.equal(markdownAssetPath("/%2e%2e/resume/"), null);
   assert.equal(markdownAssetPath("/style.css"), null);
 });
 
-test("leaves browser requests on the HTML path", async () => {
+test("leaves browser content intact and varies only HTML responses", async () => {
   const html = new Response("<html>browser</html>", {
     headers: { "Content-Type": "text/html" },
   });
-  const response = await onRequest({
+  const htmlResponse = await onRequest({
     request: new Request("https://example.com/", { headers: { Accept: "text/html" } }),
     next: async () => html,
     env: { ASSETS: { fetch: async () => assert.fail("Markdown asset should not be fetched") } },
   });
+  assert.equal(await htmlResponse.text(), "<html>browser</html>");
+  assert.equal(htmlResponse.headers.get("Vary"), "Accept");
 
-  assert.equal(response, html);
+  const cssResponse = await onRequest({
+    request: new Request("https://example.com/style.css", { headers: { Accept: "text/css,*/*;q=0.1" } }),
+    next: async () => new Response("body {}", { headers: { "Content-Type": "text/css" } }),
+    env: { ASSETS: { fetch: async () => assert.fail("Markdown asset should not be fetched") } },
+  });
+  assert.equal(cssResponse.headers.get("Vary"), null);
 });
 
 test("serves the generated variant with negotiation headers", async () => {
@@ -60,4 +73,28 @@ test("serves the generated variant with negotiation headers", async () => {
   assert.equal(response.headers.get("ETag"), null);
   assert.match(response.headers.get("x-markdown-tokens"), /^\d+$/);
   assert.match(await response.text(), /# Experience/);
+});
+
+test("serves HEAD metadata without reading a Markdown body", async () => {
+  let fetchedMethod;
+  const response = await onRequest({
+    request: new Request("https://example.com/resume/", {
+      method: "HEAD",
+      headers: { Accept: "text/markdown" },
+    }),
+    next: async () => assert.fail("HTML fallback should not be used"),
+    env: {
+      ASSETS: {
+        fetch: async (request) => {
+          fetchedMethod = request.method;
+          return new Response(null, { headers: { "Content-Length": "40" } });
+        },
+      },
+    },
+  });
+
+  assert.equal(fetchedMethod, "HEAD");
+  assert.equal(response.headers.get("Content-Length"), "40");
+  assert.equal(response.headers.get("x-markdown-tokens"), "10");
+  assert.equal(await response.text(), "");
 });
