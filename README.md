@@ -71,7 +71,7 @@ Keep project-post front matter and existing permalinks stable. Shared résumé u
 
 Cloudflare Pages uses the production Jekyll configuration in `_config_prod.yml`. Static routing and response policy live in `redirects` and `headers`. Update `_config.yml` for site-wide metadata, contact details, social URLs, and the social links used by structured data.
 
-Jekyll also generates formatting-stripped Markdown companions under `_site/__markdown/`. The Pages middleware in `functions/_middleware.js` serves those files when a page request includes `Accept: text/markdown`, then falls through to the static site for ordinary browser requests. This is implemented entirely by the repository and does not depend on Cloudflare's Markdown for Agents transformation.
+Jekyll also generates formatting-stripped Markdown companions under `_site/agent-markdown/`. The Pages middleware in `functions/_middleware.js` serves those files when a page request includes `Accept: text/markdown`, then falls through to the static site for ordinary browser requests. `_routes.json` explicitly invokes the middleware across the site while allowing internal companion fetches to remain static. This is implemented entirely by the repository and does not depend on Cloudflare's Markdown for Agents transformation.
 
 Test content negotiation locally after a production build:
 

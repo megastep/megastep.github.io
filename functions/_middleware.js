@@ -1,5 +1,10 @@
 const MARKDOWN_CONTENT_TYPE = "text/markdown; charset=utf-8";
-const MARKDOWN_DIRECTORY = "/__markdown";
+const MARKDOWN_DIRECTORY = "/agent-markdown";
+const MARKDOWN_ASSET_CONTENT_TYPES = new Set([
+  "application/octet-stream",
+  "text/markdown",
+  "text/plain",
+]);
 
 function parseMediaRange(range) {
   const [mediaType, ...parameters] = range.trim().toLowerCase().split(";");
@@ -93,6 +98,14 @@ function estimateTokenCount(markdown) {
   return Math.ceil(new TextEncoder().encode(markdown).byteLength / 4);
 }
 
+function isMarkdownAssetResponse(response) {
+  const contentType = response.headers.get("Content-Type")
+    ?.split(";", 1)[0]
+    .trim()
+    .toLowerCase();
+  return response.ok && MARKDOWN_ASSET_CONTENT_TYPES.has(contentType);
+}
+
 async function nextWithHtmlVary(context) {
   const response = await context.next();
   if (!response.headers.get("Content-Type")?.toLowerCase().includes("text/html")) {
@@ -129,7 +142,7 @@ export async function onRequest(context) {
   const assetResponse = await context.env.ASSETS.fetch(new Request(assetUrl, {
     method: request.method,
   }));
-  if (!assetResponse.ok) return nextWithHtmlVary(context);
+  if (!isMarkdownAssetResponse(assetResponse)) return nextWithHtmlVary(context);
 
   const headers = new Headers(assetResponse.headers);
   headers.set("Content-Type", MARKDOWN_CONTENT_TYPE);

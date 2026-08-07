@@ -7,7 +7,7 @@ require "pathname"
 require "reverse_markdown"
 
 module MarkdownVariants
-  OUTPUT_DIRECTORY = "__markdown"
+  OUTPUT_DIRECTORY = "agent-markdown"
   REMOVED_CONTENT = [
     "nav",
     "footer",

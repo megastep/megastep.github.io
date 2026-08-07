@@ -36,6 +36,9 @@ exclude:
   - functions
   - test
 
+include:
+  - _routes.json
+
 # Footer settings
 footer:
   copyright: Stéphane Peter
