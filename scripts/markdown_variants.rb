@@ -23,11 +23,16 @@ module MarkdownVariants
 
   module_function
 
-  def generate(destination_path)
-    destination = Pathname.new(destination_path)
+  def generate(destination_path, report: false)
+    destination = Pathname.new(destination_path).expand_path
     generated_count = 0
+    html_paths = Dir.glob(destination.join("**", "*.html").to_s).sort.map do |path|
+      Pathname.new(path)
+    end
 
-    destination.glob("**/*.html").each do |html_path|
+    puts "Found #{html_paths.length} rendered HTML pages in #{destination}" if report
+
+    html_paths.each do |html_path|
       document = Nokogiri::HTML.parse(html_path.read)
       content = extract_content(document)
       next if content.empty?
@@ -97,7 +102,7 @@ end
 
 if $PROGRAM_NAME == __FILE__
   destination = ARGV.fetch(0, "_site")
-  generated_count = MarkdownVariants.generate(destination)
+  generated_count = MarkdownVariants.generate(destination, report: true)
   abort "No Markdown variants were generated in #{destination}" if generated_count.zero?
 
   puts "Generated #{generated_count} Markdown variants in #{destination}/#{MarkdownVariants::OUTPUT_DIRECTORY}"

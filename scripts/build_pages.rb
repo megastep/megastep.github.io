@@ -19,7 +19,7 @@ Jekyll::Commands::Build.process(
 
 require_relative "markdown_variants"
 
-generated_count = MarkdownVariants.generate("_site")
+generated_count = MarkdownVariants.generate("_site", report: true)
 abort "No Markdown variants were generated" if generated_count.zero?
 
 puts "Generated #{generated_count} Markdown variants in _site/#{MarkdownVariants::OUTPUT_DIRECTORY}"
