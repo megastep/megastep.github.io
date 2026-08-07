@@ -33,6 +33,8 @@ exclude:
   - package.json
   - pnpm-lock.yaml
   - scripts
+  - functions
+  - test
 
 # Footer settings
 footer:
