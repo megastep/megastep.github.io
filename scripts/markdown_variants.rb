@@ -30,7 +30,10 @@ module MarkdownVariants
       Pathname.new(path)
     end
 
-    puts "Found #{html_paths.length} rendered HTML pages in #{destination}" if report
+    if report
+      rendered_bytes = html_paths.sum { |path| path.size }
+      puts "Found #{html_paths.length} rendered HTML pages (#{rendered_bytes} bytes) in #{destination}"
+    end
 
     html_paths.each do |html_path|
       document = Nokogiri::HTML.parse(html_path.read)
@@ -49,9 +52,11 @@ module MarkdownVariants
 
   def extract_content(document)
     nodes = document.xpath(
-      "//main | //dialog[contains(concat(' ', normalize-space(@class), ' '), ' project-dialog ')]"
+      "//*[local-name()='main'] | " \
+      "//*[local-name()='dialog' and " \
+      "contains(concat(' ', normalize-space(@class), ' '), ' project-dialog ')]"
     )
-    nodes = [document.at_xpath("//body")].compact if nodes.empty?
+    nodes = [document.at_xpath("//*[local-name()='body']")].compact if nodes.empty?
     return "" if nodes.empty?
 
     markdown = nodes.filter_map do |node|
