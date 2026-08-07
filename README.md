@@ -69,7 +69,7 @@ Keep project-post front matter and existing permalinks stable. Shared résumé u
 
 ## Deployment configuration
 
-Cloudflare Pages uses the production Jekyll configuration in `_config_prod.yml`. Static routing and response policy live in `redirects` and `headers`. Update `_config.yml` for site-wide metadata, contact details, social URLs, and the social links used by structured data.
+Cloudflare Pages uses `bundle exec ruby scripts/build_pages.rb` as its build command. The script selects the production Jekyll configuration from `CONFIGS`, builds the site, and explicitly generates the Markdown companions so the hosted build does not depend on Jekyll loading a custom hook. Static routing and response policy live in `redirects` and `headers`. Update `_config.yml` for site-wide metadata, contact details, social URLs, and the social links used by structured data. `wrangler.toml` is the source of truth for the Pages output directory, compatibility dates, and environment variables.
 
 Jekyll also generates formatting-stripped Markdown companions under `_site/agent-markdown/`. The Pages middleware in `functions/_middleware.js` serves those files when a page request includes `Accept: text/markdown`, then falls through to the static site for ordinary browser requests. `_routes.json` explicitly invokes the middleware across the site while allowing internal companion fetches to remain static. This is implemented entirely by the repository and does not depend on Cloudflare's Markdown for Agents transformation.
 
@@ -88,6 +88,7 @@ Before publishing a change, run both Jekyll builds and check the diff:
 ```sh
 bundle exec jekyll build
 bundle exec jekyll build --config _config.yml,_config_prod.yml
+JEKYLL_ENV=production bundle exec ruby scripts/build_pages.rb
 pnpm test
 git diff --check
 ```

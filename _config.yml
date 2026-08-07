@@ -96,4 +96,6 @@ jekyll-minifier:
   compress_css: true
   compress_javascript: true
   exclude:
+    - _headers
+    - _redirects
     - feed.xml
