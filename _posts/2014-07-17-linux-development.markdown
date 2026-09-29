@@ -19,12 +19,12 @@ I am also a seasoned Linux systems administrator, and was responsible for develo
 
 ### Loki Software, Inc.
 
-I worked on the Linux ports of several major video game titles while working at [Loki](https://www.lokigames.com/). These included:
+I worked on the Linux ports of several major video game titles while working at [Loki](https://megastep.github.io/lokigames.com/). These included:
 
-* [Myth II: Soulblighter](https://www.lokigames.com/products/myth2/)
-* [Heroes of Might & Magic III](https://www.lokigames.com/products/heroes3/)
-* [SimCity 3000 Unlimited](https://www.lokigames.com/products/sc3k/)
-* [Kohan: Immortal Sovereign](https://www.lokigames.com/products/kohan/)
+* [Myth II: Soulblighter](https://megastep.github.io/lokigames.com/products/myth2/)
+* [Heroes of Might & Magic III](https://megastep.github.io/lokigames.com/products/heroes3/)
+* [SimCity 3000 Unlimited](https://megastep.github.io/lokigames.com/products/sc3k/)
+* [Kohan: Immortal Sovereign](https://megastep.github.io/lokigames.com/products/kohan/)
 
 As a developer, I also helped build the then-nascent infrastructure for Linux gaming and worked on several related open-source projects that live on to this day:
 
